@@ -1,6 +1,6 @@
 ---
-title: Page 3
-description: Lorem ipsum dolor sit amet - 3
+title: Lorem Ipsum
+description: Lorem ipsum dolor sit amet
 layout: ../layouts/MainLayout.astro
 ---
 

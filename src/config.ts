@@ -26,10 +26,11 @@ export type Sidebar = Record<
 	string, { text: string; link: string }[]
 >;
 export const SIDEBAR: Sidebar = {
-	'Section Header': [
+	'Intro': [
 		{ text: 'Introduction', link: 'introduction' },
-		{ text: 'Page 2', link: 'page-2' },
-		{ text: 'Page 3', link: 'page-3' },
+		{ text: 'Lorem Ipsum', link: 'lorem-ipsum' },
 	],
-	'Another Section': [{ text: 'Page 4', link: 'page-4' }],
+	'Article Demo': [
+		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' }
+	],
 };
