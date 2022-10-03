@@ -1,6 +1,6 @@
 ---
 import * as CONFIG from '../../config';
-import AstroLogo from './AstroLogo.astro';
+import Logo from './Logo.astro';
 import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
 ---
@@ -13,7 +13,7 @@ import SidebarToggle from './SidebarToggle';
 		</div>
 		<div class="logo flex">
 			<a href="/">
-				<AstroLogo size={40} />
+				<Logo size={50} />
 				<h1>{CONFIG.SITE.title}</h1>
 			</a>
 		</div>
@@ -44,7 +44,7 @@ import SidebarToggle from './SidebarToggle';
 		font-weight: 600;
 		line-height: 1;
 		color: hsla(var(--color-base-white), 100%, 1);
-		gap: 0.25em;
+		gap: 0.5em;
 		z-index: -1;
 	}
 
@@ -54,11 +54,9 @@ import SidebarToggle from './SidebarToggle';
 		margin: -0.5em -0.25em;
 		text-decoration: none;
 		font-weight: bold;
-	}
-
-	.logo a {
 		transition: color 100ms ease-out;
 		color: var(--theme-text);
+		gap: 0.5em;
 	}
 
 	.logo a:hover,
@@ -102,12 +100,6 @@ import SidebarToggle from './SidebarToggle';
 		.menu-toggle {
 			display: none;
 		}
-	}
-
-	/** Style Algolia */
-	:root {
-		--docsearch-primary-color: var(--theme-accent);
-		--docsearch-logo-color: var(--theme-text);
 	}
 
 	.search-item {
