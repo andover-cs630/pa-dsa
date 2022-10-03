@@ -1,13 +1,4 @@
-# Astro Starter Kit: Docs Site
-
-```bash
-npm create astro@latest -- --template docs
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/docs)
-
-![docs](https://user-images.githubusercontent.com/4677417/186189283-0831b9ab-d6b9-485d-8955-3057e532ab31.png)
-
+# Data Structures and Algorithms Textbook
 
 ## Features
 
@@ -35,9 +26,7 @@ All commands are run from the root of the project, from a terminal:
 
 To deploy your site to production, check out our [Deploy an Astro Website](https://docs.astro.build/guides/deploy) guide.
 
-## New to Astro?
-
-Welcome! Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Check out the [Astro documentation](https://docs.astro.build).
 
 ## Customize This Theme
 
@@ -48,8 +37,6 @@ Welcome! Check out [our documentation](https://docs.astro.build) or jump into ou
 ### CSS styling
 
 The theme's look and feel is controlled by a few key variables that you can customize yourself. You'll find them in the `src/styles/theme.css` CSS file.
-
-If you've never worked with CSS variables before, give [MDN's guide on CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) a quick read.
 
 This theme uses a "cool blue" accent color by default. To customize this for your project, change the `--theme-accent` variable to whatever color you'd like:
 
