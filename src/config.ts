@@ -20,7 +20,6 @@ export type Frontmatter = {
 	description: string;
 	layout: string;
 	image?: { src: string; alt: string };
-	ogLocale?: string;
 };
 
 export type Sidebar = Record<
