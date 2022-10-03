@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: "Data Structures and Algorithms",
+	description: "An online textbook created by Phillips Academy's CSC630 class for data structures and algorithms in computer science.",
 	defaultLanguage: 'en_US',
 };
 
@@ -22,10 +22,6 @@ export type Frontmatter = {
 	image?: { src: string; alt: string };
 	ogLocale?: string;
 };
-
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
-
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
 
 export type Sidebar = Record<
 	string, { text: string; link: string }[]

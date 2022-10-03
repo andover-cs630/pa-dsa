@@ -18,7 +18,6 @@ const { frontmatter, headings } = Astro.props as Props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
 const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
-const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 ---
 
 <html lang="en" class="initial">
@@ -26,7 +25,7 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 		<HeadCommon />
 		<HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
 		<title>
-			{frontmatter.title ? `${frontmatter.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}
+			{frontmatter.title && frontmatter.title !== "Introduction" ? `${frontmatter.title}` : CONFIG.SITE.title}
 		</title>
 		<style>
 			body {
@@ -126,12 +125,12 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 				<LeftSidebar currentPage={currentPage} />
 			</aside>
 			<div id="grid-main">
-				<PageContent frontmatter={frontmatter} headings={headings} githubEditUrl={githubEditUrl}>
+				<PageContent frontmatter={frontmatter} headings={headings}>
 					<slot />
 				</PageContent>
 			</div>
 			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-				<RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
+				<RightSidebar headings={headings} />
 			</aside>
 		</main>
 		<Footer path={currentFile} />

@@ -1,16 +1,14 @@
 ---
 import type { Frontmatter } from '../../config';
-import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
 import type { MarkdownHeading } from 'astro';
 
 type Props = {
 	frontmatter: Frontmatter;
 	headings: MarkdownHeading[];
-	githubEditUrl: string;
 };
 
-const { frontmatter, headings, githubEditUrl } = Astro.props as Props;
+const { frontmatter, headings } = Astro.props as Props;
 const title = frontmatter.title;
 ---
 
@@ -22,9 +20,6 @@ const title = frontmatter.title;
 		</nav>
 		<slot />
 	</section>
-	<nav class="block sm:hidden">
-		<MoreMenu editHref={githubEditUrl} />
-	</nav>
 </article>
 
 <style>
