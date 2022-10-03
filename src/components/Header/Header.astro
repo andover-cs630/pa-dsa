@@ -1,16 +1,8 @@
 ---
-import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../../languages';
 import * as CONFIG from '../../config';
 import AstroLogo from './AstroLogo.astro';
 import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
-
-type Props = {
-	currentPage: string;
-};
-
-const { currentPage } = Astro.props as Props;
-const lang = getLanguageFromURL(currentPage);
 ---
 
 <header>
