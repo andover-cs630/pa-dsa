@@ -7,5 +7,15 @@ export default defineConfig({
 		// Enable Preact to support Preact JSX components.
 		preact()
 	],
+	markdown: {
+        remarkPlugins: [
+            'remark-math',
+        ],
+        rehypePlugins: [
+            ['rehype-katex', {
+            // Katex plugin options
+            }]
+        ]
+    },
 	site: "https://astro.build"
 });

@@ -16,6 +16,8 @@
     "@types/node": "^18.0.0",
     "@types/react": "^17.0.45",
     "astro": "^1.4.3",
-    "preact": "^10.7.3"
+    "preact": "^10.7.3",
+    "rehype-katex": "^6.0.2",
+    "remark-math": "^5.1.1"
   }
 }
