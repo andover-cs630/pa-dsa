@@ -4,7 +4,7 @@ An online textbook for data structures and algorithms, created by Phillips Acade
 
 ## Features
 
-- ✅ **Full Markdown support**
+- ✅ **Full Markdown and LaTeX support**
 - ✅ **Responsive mobile-friendly design**
 - ✅ **Sidebar navigation**
 - ✅ **Automatic table of contents**
@@ -22,7 +22,11 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-Check out the [Astro documentation](https://docs.astro.build).
+Check out the [Astro documentation](https://docs.astro.build) too!
+
+## Pages and routing
+
+Astro looks in the `src/pages` directory for pages to build. The supported file types are `.astro`, `.md`, `.mdx` (with the MDX integration installed), and `.html`. However, you can also have folders. For example, both `src/pages/foo/index.md` and `src/pages/foo.md` would correspond to the `/foo` route.
 
 ## Site metadata
 
@@ -44,19 +48,19 @@ The site currently uses a "cool blue" theme. To change this, adjust the `--theme
 
 ## Page metadata
 
-Astro uses frontmatter in Markdown pages to choose layouts and pass properties to those layouts. If you are using the default layout, you can customize the page in many different ways to optimize SEO and other things. For example, you can use the `title` and `description` properties to set the document title, meta title, meta description, and Open Graph description.
+Astro uses **frontmatter** in Markdown pages to choose layouts and pass properties to those layouts. For example, you can use the `title` and `description` properties to set various metadata tags. Frontmatter is located at the top of a Markdown file and looks like this:
 
 ```markdown
 ---
 title: Example title
-description: Really cool docs example that uses Astro
+description: An example article on programming.
 layout: ../layouts/MainLayout.astro
 ---
 
-# Page content...
+The page content goes here!
 ```
 
-For more SEO related properties, look at `src/components/HeadSEO.astro`.
+For more SEO-related properties, look at `src/components/HeadSEO.astro`.
 
 ## Sidebar navigation
 
