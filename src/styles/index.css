@@ -203,6 +203,10 @@ code {
 	word-break: break-word;
 }
 
+pre.astro-code {
+	margin: 1em auto;
+}
+
 pre.astro-code > code {
 	all: unset;
 }

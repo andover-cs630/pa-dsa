@@ -1,22 +1,25 @@
-import { defineConfig } from 'astro/config';
-import preact from '@astrojs/preact';
+import { defineConfig } from "astro/config";
+import preact from "@astrojs/preact";
+import mdx from "@astrojs/mdx";
+
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		// Enable Preact to support Preact JSX components.
-		preact()
-	],
-	markdown: {
+    integrations: [
+        preact(),
+        mdx()
+    ],
+    markdown: {
         remarkPlugins: [
-            'remark-gfm',
-            'remark-math',
+            remarkGfm,
+            remarkMath
         ],
         rehypePlugins: [
-            ['rehype-katex', {
-            // Katex plugin options
-            }]
+            [rehypeKatex, {/** KaTeX options */}]
         ]
     },
-	site: "https://astro.build"
+  site: "https://pa-dsa.vercel.app"
 });
