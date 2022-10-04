@@ -7,14 +7,11 @@ export const SITE = {
 export const OPEN_GRAPH = {
 	image: {
 		src: 'https://i.postimg.cc/rFNcNRkT/og-default.png',
-		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
-	},
-	twitter: 'astrodotbuild',
+		alt: "Data Structures and Algorithms textbook site banner"
+	}
 };
 
-// This is the type of the frontmatter you put in the docs markdown files.
+// This is the type of the frontmatter you put in the Markdown files.
 export type Frontmatter = {
 	title: string;
 	description: string;

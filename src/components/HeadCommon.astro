@@ -3,24 +3,16 @@ import '../styles/theme.css';
 import '../styles/index.css';
 ---
 
-<!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<meta name="generator" content={Astro.generator} />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content={Astro.generator}>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="sitemap" href="/sitemap.xml">
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap">
 
-<link rel="sitemap" href="/sitemap.xml" />
-
-<!-- Preload Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap"
-	rel="stylesheet"
-/>
-
-<!-- Scrollable a11y code helper -->
 <script is:inline>
 	Array.from(document.getElementsByTagName('pre')).forEach((element) => {
 		element.setAttribute('tabindex', '0');

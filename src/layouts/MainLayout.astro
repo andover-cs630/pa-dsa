@@ -24,8 +24,9 @@ const currentPage = Astro.url.pathname;
 		<HeadCommon />
 		<HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
 		<title>
-			{frontmatter.title && frontmatter.title !== "Introduction" ? `${frontmatter.title}` : CONFIG.SITE.title}
+			{frontmatter.title ?? CONFIG.SITE.title}
 		</title>
+		<!-- LaTeX formatting stylesheet -->
 		<link rel="stylesheet"
 			  href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
 			  integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X"
