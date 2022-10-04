@@ -18,6 +18,7 @@
     "astro": "^1.4.3",
     "preact": "^10.7.3",
     "rehype-katex": "^6.0.2",
+    "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1"
   }
 }

@@ -9,6 +9,7 @@ export default defineConfig({
 	],
 	markdown: {
         remarkPlugins: [
+            'remark-gfm',
             'remark-math',
         ],
         rehypePlugins: [
