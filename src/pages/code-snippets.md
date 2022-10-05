@@ -1,7 +1,7 @@
 ---
 title: Inline Code Snippets
 description: A demonstration on inlining code snippets in Astro, with Shiki code styling.
-layout: ../layouts/MainLayout.astro
+layout: "@main"
 ---
 
 If you don't want to create separate files for code and use MDX to insert them as components, you can also inline code snippets directly in Markdown. Astro uses Shiki to automatically style code blocks. [Themes](https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes) can be configured in the `astro.config.mjs` file. The site currently uses the One Dark Pro theme and automatically formats all code for [languages supported by Shiki](https://github.com/shikijs/shiki/blob/main/docs/languages.md#all-languages).

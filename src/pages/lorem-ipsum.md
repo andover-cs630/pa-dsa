@@ -1,7 +1,7 @@
 ---
 title: Lorem Ipsum
 description: Lorem ipsum dolor sit amet
-layout: ../layouts/MainLayout.astro
+layout: "@main"
 ---
 
 This is a fully-featured page, written in Markdown!
