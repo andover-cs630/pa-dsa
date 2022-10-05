@@ -1,0 +1,2 @@
+# If a layout is not specified in the frontmatter of a Markdown file, it will default to MainLayout.astro
+layout: "@main"
