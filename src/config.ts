@@ -28,6 +28,7 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Lorem Ipsum', link: 'lorem-ipsum' },
 	],
 	'Article Demo': [
-		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' }
+		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
+		{ text: 'Inline Code Snippets', link: 'code-snippets' },
 	],
 };

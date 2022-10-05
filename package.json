@@ -12,12 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "preact": "^10.7.3"
+  },
+  "devDependencies": {
     "@astrojs/mdx": "^0.11.4",
     "@astrojs/preact": "^1.1.1",
-    "@types/node": "^18.0.0",
-    "@types/react": "^17.0.45",
-    "astro": "^1.4.3",
-    "preact": "^10.7.3",
+    "@types/node": "^18.8.2",
+    "@types/react": "^18.0.21",
+    "astro": "^1.4.4",
     "rehype-katex": "^6.0.2",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1"

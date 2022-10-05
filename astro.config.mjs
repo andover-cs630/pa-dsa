@@ -15,11 +15,15 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [
             remarkGfm,
-            remarkMath
+            remarkMath,
         ],
         rehypePlugins: [
             [rehypeKatex, {/** KaTeX options */}]
-        ]
+        ],
+        shikiConfig: {
+            theme: "one-dark-pro",
+            wrap: true,
+        },
     },
   site: "https://pa-dsa.vercel.app"
 });
