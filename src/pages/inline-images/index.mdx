@@ -3,16 +3,12 @@ title: Inline Images
 description: A demonstration of inlined images in Astro with MDX files.
 ---
 
-This project includes a plugin for Astro called [`astro-m2dx`](https://www.npmjs.com/package/astro-m2dx). `astro-m2dx` provides utilities like default frontmatter values. For `.mdx` files (**not** `.md` files!), images can also be included using relative imports.
+This project includes a plugin for Astro called [`astro-m2dx`](https://www.npmjs.com/package/astro-m2dx). It provides utilities for `.mdx` files such as default frontmatter values. This page's source `.mdx` file does not have a layout specified in the frontmatter, so the default `MainLayout.astro` is used.
 
-This allows images to be colocated with the articles they belong to instead of having every image in an article in the `public` directory.
+In `.mdx` files (**not** `.md` files!), images can be included using relative imports thanks to `astro-m2dx`. This allows images to be colocated with the articles they belong to instead of putting every article image in the `public` directory.
 
 ## Example Gallery
 
 ![A grid tiled by triangles of different shapes and sizes](./poly-grid.svg)
 ![A gradient of jagged color bands](./stacked-peaks.svg)
 ![A picture of the Phillips Academy campus during winter](./campus.jpg)
-
-## Caveats
-
-If relative imports are used in `.mdx` files, the files **must not** include frontmatter fields with a default value provided in `_frontmatter.yaml`. This is probably an issue with `astro-m2dx`; track the issue progress [here](https://github.com/christian-hackyourshack/npm/issues/7).
