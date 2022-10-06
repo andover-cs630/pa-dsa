@@ -30,6 +30,7 @@ export const SIDEBAR: Sidebar = {
 	],
 	'Article Demos': [
 		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
+		{ text: 'Heapsort', link: 'heapsort' },
 		{ text: 'Inline Code Snippets', link: 'code-snippets' },
 		{ text: 'Inline Images', link: 'inline-images' },
 	],
