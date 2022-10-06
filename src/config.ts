@@ -25,8 +25,6 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	'Intro': [
 		{ text: 'Introduction', link: 'introduction' },
-		{ text: 'Lorem Ipsum', link: 'lorem-ipsum' },
-		{ text: 'About', link: 'about' },
 	],
 	'Article Demos': [
 		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
