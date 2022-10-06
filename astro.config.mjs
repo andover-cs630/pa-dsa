@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
 import mdx from "@astrojs/mdx";
+
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import m2dx from "astro-m2dx";
@@ -17,7 +18,8 @@ export default defineConfig({
             remarkGfm,
             remarkMath,
             [m2dx, {
-                frontmatter: true,
+                exportComponents: false,
+                autoImports: false,
                 relativeImages: true,
             }],
         ],
