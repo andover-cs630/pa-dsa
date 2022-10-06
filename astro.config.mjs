@@ -18,8 +18,7 @@ export default defineConfig({
             remarkGfm,
             remarkMath,
             [m2dx, {
-                exportComponents: false,
-                autoImports: false,
+                frontmatter: true,
                 relativeImages: true,
             }],
         ],
