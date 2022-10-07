@@ -22,8 +22,10 @@ const currentPageMatch = currentPage.endsWith('/')
 							const url = Astro.site?.pathname + child.link;
 							return (
 								<li class="nav-link">
-									<a href={url} aria-current={currentPageMatch === child.link ? 'page' : false}>
-										{child.text}
+									<a href={url}
+									   aria-current={currentPageMatch === child.link ? 'page' : false}
+									>
+										<p tabindex="0">{child.text}</p>
 									</a>
 								</li>
 							);
