@@ -12,7 +12,7 @@ const currentPageMatch = currentPage.endsWith('/')
 ---
 
 <nav aria-labelledby="grid-left">
-	<ul class="nav-groups">
+	<ol class="nav-groups">
 		{Object.entries(SIDEBAR).map(([header, children]) => (
 			<li>
 				<div class="nav-group">
@@ -34,7 +34,7 @@ const currentPageMatch = currentPage.endsWith('/')
 				</div>
 			</li>
 		))}
-	</ul>
+	</ol>
 </nav>
 
 <script is:inline>
