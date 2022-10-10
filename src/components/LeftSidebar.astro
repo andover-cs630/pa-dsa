@@ -17,7 +17,7 @@ const currentPageMatch = currentPage.endsWith('/')
 			<li>
 				<div class="nav-group">
 					<h2>{header}</h2>
-					<ul>
+					<ol>
 						{children.map((child) => {
 							const url = Astro.site?.pathname + child.link;
 							return (
@@ -30,7 +30,7 @@ const currentPageMatch = currentPage.endsWith('/')
 								</li>
 							);
 						})}
-					</ul>
+					</ol>
 				</div>
 			</li>
 		))}
