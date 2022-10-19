@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "astro-m2dx": "^0.4.5",
     "preact": "^10.11.1"
   },
   "devDependencies": {
