@@ -34,5 +34,6 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Quicksort', link: 'quicksort' },
 		{ text: 'Inline Code Snippets', link: 'code-snippets' },
 		{ text: 'Inline Images', link: 'inline-images' },
+		{ text: 'Inline Images 2', link: 'inline-images-2' },
 	],
 };
