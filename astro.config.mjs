@@ -1,19 +1,23 @@
 import { defineConfig } from "astro/config";
-import preact from "@astrojs/preact";
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
+import m2dx from "astro-m2dx";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), svelte(), mdx()],
+  integrations: [mdx(), svelte()],
   markdown: {
-    remarkPlugins: [remarkGfm, remarkMath],
-    rehypePlugins: [[rehypeKatex, {
-      /** KaTeX options */
-    }]],
+    remarkPlugins: [
+      [m2dx, {
+        relativeImages: true,
+      }],
+      remarkGfm,
+      remarkMath,
+    ],
+    rehypePlugins: [rehypeKatex],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true

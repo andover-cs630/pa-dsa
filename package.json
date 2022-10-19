@@ -11,16 +11,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "preact": "^10.11.2"
-  },
   "devDependencies": {
     "@astrojs/mdx": "^0.11.4",
-    "@astrojs/preact": "^1.2.0",
     "@astrojs/svelte": "^1.0.1",
     "@types/node": "^18.8.2",
-    "@types/react": "^18.0.21",
     "astro": "^1.4.5",
+    "astro-m2dx": "^0.4.5",
     "rehype-katex": "^6.0.2",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
