@@ -32,6 +32,7 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Queues', link: 'queues' },
 		{ text: 'Heapsort', link: 'heapsort' },
 		{ text: 'Quicksort', link: 'quicksort' },
+		{ text: 'Pointers & Objects', link: 'pointers-and-object-contents' },
 		{ text: 'Inline Code Snippets', link: 'code-snippets' },
 		{ text: 'Inline Images', link: 'inline-images' },
 		{ text: 'Inline Images 2', link: 'inline-images-2' },
