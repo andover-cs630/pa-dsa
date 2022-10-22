@@ -28,13 +28,19 @@ export const SIDEBAR: Sidebar = {
 	],
 	'Article Demos': [
 		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
-		{ text: 'Hash Tables', link: 'hash-tables' },
+		{ text: 'Pointers & Objects', link: 'pointers-and-object-contents' },
 		{ text: 'Queues', link: 'queues' },
+		{ text: 'Binary Search Tree', link: 'binary-search-trees' },
+		{ text: 'Hash Tables', link: 'hash-tables' },
 		{ text: 'Heapsort', link: 'heapsort' },
 		{ text: 'Quicksort', link: 'quicksort' },
-		{ text: 'Pointers & Objects', link: 'pointers-and-object-contents' },
-		{ text: 'Inline Code Snippets', link: 'code-snippets' },
-		{ text: 'Inline Images', link: 'inline-images' },
-		{ text: 'Inline Images 2', link: 'inline-images-2' },
+		{ text: 'Lower Bounds of Sorting', link: 'lower-bounds-of-sorting' },
+		
+		
+		
+
+		// { text: 'Inline Code Snippets', link: 'code-snippets' },
+		// { text: 'Inline Images', link: 'inline-images' },
+		// { text: 'Inline Images 2', link: 'inline-images-2' },
 	],
 };
