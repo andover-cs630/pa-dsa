@@ -7,6 +7,9 @@
     "paths": {
       "@main": [
         "src/layouts/MainLayout.astro",
+      ],
+      "@home": [
+        "src/layouts/HomeLayout.astro",
       ]
     },
   }

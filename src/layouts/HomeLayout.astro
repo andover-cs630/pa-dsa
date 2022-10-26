@@ -35,23 +35,20 @@ const currentPage = Astro.url.pathname;
 		<style>
 			body {
 				width: 100%;
-				display: grid;
-				grid-template-rows: var(--theme-navbar-height) 1fr;
-				--gutter: 0.5rem;
-				--doc-padding: 2rem;
+				/* display: grid; */
+				grid-template-rows: var(--theme-navbar-height) 2fr;
+				--gutter: 1rem;
+				--doc-padding: 2.5rem;
 			}
 
-			.layout {
+			/* .layout {
 				display: grid;
 				grid-auto-flow: column;
-				grid-template-columns: minmax(var(--gutter), 1fr) minmax(0, var(--max-width)) minmax(
-						var(--gutter),
-						1fr
-					);
+				grid-template-columns: minmax(var(--gutter));
 				overflow-x: hidden;
-			}
+			} */
 
-			.grid-sidebar {
+			/* .grid-sidebar {
 				height: 100vh;
 				position: sticky;
 				top: 0;
@@ -63,7 +60,7 @@ const currentPage = Astro.url.pathname;
 				background-color: var(--theme-bg);
 				z-index: 10;
 				display: none;
-			}
+			} */
 
 			#grid-main {
 				padding: var(--doc-padding) var(--gutter);
@@ -73,9 +70,9 @@ const currentPage = Astro.url.pathname;
 				height: 100%;
 			}
 
-			#grid-right {
+			/* #grid-right {
 				display: none;
-			}
+			} */
 
 			@media (min-width: 50em) {
 				.layout {
@@ -84,26 +81,26 @@ const currentPage = Astro.url.pathname;
 					gap: 1em;
 				}
 
-				#grid-left {
+				/* #grid-left {
 					display: flex;
 					padding-left: 2rem;
 					position: sticky;
 					grid-column: 1;
-				}
+				} */
 			}
 
 			@media (min-width: 72em) {
 				.layout {
-					grid-template-columns: 20rem minmax(0, var(--max-width)) 18rem;
+					grid-template-columns: 10px minmax(0, var(--max-width)) 20rem;
 					padding-left: 0;
 					padding-right: 0;
 					margin: 0 auto;
 				}
 
-				#grid-right {
+				/* #grid-right {
 					grid-column: 3;
 					display: flex;
-				}
+				} */
 			}
 		</style>
 		<style is:global>
@@ -116,28 +113,25 @@ const currentPage = Astro.url.pathname;
 				overflow: hidden;
 			}
 
-			.mobile-sidebar-toggle #grid-left {
+			/* .mobile-sidebar-toggle #grid-left {
 				display: block;
 				top: 2rem;
-			}
+			} */
 		</style>
 	</head>
 
 	<body>
 		<Header currentPage={currentPage} />
 		<main class="layout">
-			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-				<LeftSidebar currentPage={currentPage} />
-			</aside>
 			<div id="grid-main">
 				<PageContent frontmatter={frontmatter} headings={headings}>
 					<slot />
 				</PageContent>
 			</div>
-			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-				<RightSidebar headings={headings} />
-			</aside>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+
+
