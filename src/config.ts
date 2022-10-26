@@ -29,6 +29,7 @@ export const SIDEBAR: Sidebar = {
 	'Article Demos': [
 		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
 		{ text: 'Pointers & Objects', link: 'pointers-and-object-contents' },
+		{ text: 'Linked List', link: 'LinkedList' },
 		{ text: 'Queues', link: 'queues' },
 		{ text: 'Binary Search Tree', link: 'binary-search-trees' },
 		{ text: 'Hash Tables', link: 'hash-tables' },
