@@ -1,0 +1,17 @@
+---
+type Props = {
+    pythonCode: string,
+    javaCode: string,
+}
+
+const { pythonCode, javaCode } = Astro.props as Props;
+---
+
+<div>
+    <div class="language-python">
+        <pre><code set:text={pythonCode}></code></pre>
+    </div>
+    <div class="language-java">
+        <pre><code set:text={javaCode}></code></pre>
+    </div>
+</div>
