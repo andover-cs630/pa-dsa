@@ -1,4 +1,6 @@
 ---
+import { Code } from "astro/components"
+
 type Props = {
     pythonCode: string,
     javaCode: string,
@@ -9,9 +11,9 @@ const { pythonCode, javaCode } = Astro.props as Props;
 
 <div>
     <div class="language-python">
-        <pre><code set:text={pythonCode}></code></pre>
+        <Code code={pythonCode} lang="python" theme="one-dark-pro"/>
     </div>
     <div class="language-java">
-        <pre><code set:text={javaCode}></code></pre>
+        <Code code={javaCode} lang="java" theme="one-dark-pro" />
     </div>
 </div>
