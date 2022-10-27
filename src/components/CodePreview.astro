@@ -11,8 +11,8 @@ const { pythonCode, javaCode } = Astro.props as Props;
 
 
 <div>
-    <button id="python-switch" class="language-switch">Python</button>
-    <button id="java-switch" class="language-switch">Java</button>
+    <button class="python-switch language-switch">Python</button>
+    <button id="java-switch" class="java-switch language-switch">Java</button>
     <div class="language-python">
         <Code code={pythonCode} lang="python" theme="one-dark-pro"/>
     </div>
@@ -20,19 +20,21 @@ const { pythonCode, javaCode } = Astro.props as Props;
         <Code code={javaCode} lang="java" theme="one-dark-pro" />
     </div>
     <script>
-        const pythonSwitch = document.getElementById("python-switch");
-        const javaSwitch = document.getElementById("java-switch");
-        const pythonCode = document.querySelector(".language-python");
-        const javaCode = document.querySelector(".language-java");
+        const pythonSwitch = document.querySelectorAll(".python-switch");
+        const javaSwitch = document.querySelectorAll(".java-switch");
 
-        pythonSwitch.addEventListener("click", () => {
-            pythonCode.hidden = false;
-            javaCode.hidden = true;
+        pythonSwitch.forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelector(".language-python").hidden = false;
+                document.querySelector(".language-java").hidden = true;
+            });
         });
 
-        javaSwitch.addEventListener("click", () => {
-            pythonCode.hidden = true;
-            javaCode.hidden = false;
+        javaSwitch.forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelector(".language-python").hidden = true;
+                document.querySelector(".language-java").hidden = false;
+            });
         });
     </script>
 </div>
