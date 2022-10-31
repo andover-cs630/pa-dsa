@@ -1,14 +1,29 @@
 ---
+import Logo from "./Header/Logo.astro";
 ---
 
-<footer>
-	<p>Lorem ipsum</p>
-</footer>
+<div class="footer">
+	<h1> DATAL </h1>
+</div>
 
 <style>
-	footer {
+	@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+	.footer {
+		background: #0077B8;
+		height: 40vh;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+
+	.footer h1 {
+		margin-bottom: 1rem;
 		margin-top: auto;
-		padding: 2rem;
-		border-top: 3px solid var(--theme-divider);
+		color: white;
+		font-family: "Lato";
+		font-weight: 900;
+		font-size: 4rem;
+		margin-left: 1rem;
 	}
 </style>
