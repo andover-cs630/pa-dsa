@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<div class="button">
+    <h1> Start Here </h1>
+    <Icon name="ph:caret-right-duotone" />
+</div>
+
+<style> 
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    .button {
+        background-color: #EB3933;
+        height: 4rem;
+        width: 13.5rem;
+        display: flex;
+        box-shadow: 0.15rem 0.15rem 5px #BA1812;
+        border-radius: 0.5rem;
+        margin: auto;
+        padding-left: 0.5rem;
+        align-items: center;
+    }
+
+   .button h1 {
+        color: white;
+        font-weight: 800;
+		font-size: 1.8rem;
+        stroke: black; 
+        stroke-width: 0.125rem;
+        font-family: "Lato", sans-serif;  
+        margin-left: 1.6rem;
+    }
+
+    .button:hover {
+        background-color: #BA1812;
+        box-shadow: 0.15rem 0.15rem 5px #6F0E0B;
+    }
+
+    [astro-icon] {
+		color: white;
+		height: 2rem;
+        margin-left: 0.1rem;
+        margin-right: 0;
+	}
+</style>
