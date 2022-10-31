@@ -25,22 +25,28 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	'Intro': [
 		{ text: 'Introduction', link: 'introduction' },
-	],
-	'Article Demos': [
-		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
 		{ text: 'Pointers & Objects', link: 'pointers-and-object-contents' },
+	],
+	'Elementary Structures': [
+		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
+		{ text: 'Linked List', link: 'LinkedList' },
 		{ text: 'Queues', link: 'queues' },
-		{ text: 'Binary Search Tree', link: 'binary-search-trees' },
-		{ text: 'Hash Tables', link: 'hash-tables' },
-		{ text: 'Heapsort', link: 'heapsort' },
-		{ text: 'Quicksort', link: 'quicksort' },
-		{ text: 'Lower Bounds of Sorting', link: 'lower-bounds-of-sorting' },
-		
-		
-		
 
 		// { text: 'Inline Code Snippets', link: 'code-snippets' },
 		// { text: 'Inline Images', link: 'inline-images' },
 		// { text: 'Inline Images 2', link: 'inline-images-2' },
+	],
+
+	'Advanced Structures': [
+		{ text: 'Binary Search Tree', link: 'binary-search-trees' },
+		{ text: 'Hash Tables', link: 'hash-tables' },
+	],
+
+
+	'Algorithms': [
+		{ text: 'Heapsort', link: 'heapsort' },
+		{ text: 'Quicksort', link: 'quicksort' },
+		{ text: 'Lower Bounds of Sorting', link: 'lower-bounds-of-sorting' },
+		{ text: 'Graphing Algorithms', link: 'graphing-algorithms' },
 	],
 };
