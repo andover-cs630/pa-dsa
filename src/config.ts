@@ -44,7 +44,7 @@ export const SIDEBAR: Sidebar = {
 
 
 	'Algorithms': [
-		{ text: 'Heapsort', link: 'heapsort' },
+		{ text: 'Heapsort', link: 'Heapsort' },
 		{ text: 'Quicksort', link: 'quicksort' },
 		{ text: 'Lower Bounds of Sorting', link: 'lower-bounds-of-sorting' },
 		{ text: 'Graphing Algorithms', link: 'graphing-algorithms' },
