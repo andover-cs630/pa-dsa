@@ -16,7 +16,7 @@
     "@astrojs/svelte": "^1.0.1",
     "@types/node": "^18.8.2",
     "astro": "^1.4.5",
-    "astro-m2dx": "^0.4.6",
+    "astro-m2dx": "^0.4.5",
     "rehype-katex": "^6.0.2",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
