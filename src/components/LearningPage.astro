@@ -1,7 +1,5 @@
 ---
-import StartHereButton from "./StartHereButton.astro";
-import LearnButton from "./LearnButton.astro";
-import ReadMoreButton from "./ReadMoreButton.astro";
+import Button from "./Button.astro";
 ---
 
 <div class="learningStylesPage">
@@ -17,7 +15,7 @@ import ReadMoreButton from "./ReadMoreButton.astro";
                     <h1 class="quickSortText"> Quick Sort </h1>
                     <p1> Proin libero nunc consequat interdum varius. Egestas purus viverra accumsan in. Sagittis vitae et leo duis ut diam quam nulla porttitor. In mollis nunc sed id semper risus. Turpis nunc eget lorem dolor sed viverra ipsum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Gravida quis blandit turpis cursus in hac habitasse. Tincidunt dui ut ornare lectus sit amet est placerat in. Libero id faucibus nisl tincidunt eget nullam. Sed blandit libero volutpat sed cras ornare arcu. Dignissim enim sit amet venenatis urna. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Gravida quis blandit turpis cursus in hac habitasse platea. Id faucibus nisl tincidunt eget nullam non. Mi sit amet mauris </p1>    
                 </div>
-                <StartHereButton />
+                <Button title="Read More" link="/quicksort" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/>
             </div>
         </div>
     </div>
@@ -27,7 +25,7 @@ import ReadMoreButton from "./ReadMoreButton.astro";
             <iframe src="https://drive.google.com/file/d/1Q9Rul23upNs-mhCig4BZJm7qLsb5MTGZ/preview" />
             <div class="videoSide">
                 <p1>"Some cool quote about how great our videos are yess yess yasssss" - Abby</p1>
-                <LearnButton />
+                <Button title="Watch" link="/" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
             </div>
         </div>
     </div>
@@ -40,7 +38,7 @@ import ReadMoreButton from "./ReadMoreButton.astro";
         <h1 class="practiceExerciseText"> Practice Exercises </h1>
         <div class="practiceExercise">
             <img class="practiceExerciseSVG" src="/images/practiceExercise.svg">
-            <ReadMoreButton />
+            <Button title="Learn Now" link="/" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
         </div>
     </div>
 
@@ -113,17 +111,14 @@ import ReadMoreButton from "./ReadMoreButton.astro";
         display: flex;
         border-inline: 2px solid black;
         border-bottom: 2px solid black;
-        padding: 1rem;
+        padding: 2rem;
         background-color: white;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .quickSortText {
         padding-bottom: 0.2rem;
-    }
-
-    .quickSortExample StartHereButton {
-        margin-bottom: 0;
-        margin-top: auto;
     }
 
     .quickSort {
@@ -175,6 +170,4 @@ import ReadMoreButton from "./ReadMoreButton.astro";
         width: 100%;
         margin: auto;
     }
-
-
 </style>
