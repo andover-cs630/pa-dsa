@@ -273,10 +273,10 @@ blockquote code {
 }
 
 blockquote {
-	margin: 2rem 0;
+	margin: 1.5rem 0;
 	padding: 1.25em 1.5rem;
 	border-left: 3px solid var(--theme-text-light);
-	background-color: var(--theme-bg-offset);
+	background-color: #F2F2F2;
 	border-radius: 0 0.25rem 0.25rem 0;
 	line-height: 1.7;
 }
