@@ -38,30 +38,27 @@ const currentPage = Astro.url.pathname;
 				display: grid;
 				grid-template-rows: var(--theme-navbar-height) 1fr;
 				--gutter: 0.5rem;
-				--doc-padding: 2rem;
+				--doc-padding: 0.5rem;
 			}
 
 			.layout {
 				display: grid;
 				grid-auto-flow: column;
-				grid-template-columns: minmax(var(--gutter), 1fr) minmax(0, var(--max-width)) minmax(
-						var(--gutter),
-						1fr
-					);
 				overflow-x: hidden;
+				width: 100%;
+				justify-content: center;
 			}
 
 			.grid-sidebar {
 				height: 100vh;
 				position: sticky;
-				top: 0;
+				top: 4.5rem;
 				padding: 0;
 			}
 
 			#grid-left {
 				position: fixed;
 				background-color: var(--theme-bg);
-				z-index: 10;
 				display: none;
 			}
 
@@ -71,6 +68,7 @@ const currentPage = Astro.url.pathname;
 				display: flex;
 				flex-direction: column;
 				height: 100%;
+				width: 60vw;
 			}
 
 			#grid-right {
@@ -80,7 +78,7 @@ const currentPage = Astro.url.pathname;
 			@media (min-width: 50em) {
 				.layout {
 					overflow: initial;
-					grid-template-columns: 20rem minmax(0, var(--max-width));
+					grid-template-columns: 1rem minmax(0, var(--max-width));
 					gap: 1em;
 				}
 
@@ -94,7 +92,7 @@ const currentPage = Astro.url.pathname;
 
 			@media (min-width: 72em) {
 				.layout {
-					grid-template-columns: 20rem minmax(0, var(--max-width)) 18rem;
+					grid-template-columns: 18rem 60vw 18rem;
 					padding-left: 0;
 					padding-right: 0;
 					margin: 0 auto;
