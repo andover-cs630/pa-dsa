@@ -55,8 +55,17 @@ const currentPageMatch = currentPage.endsWith("/")
   @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
   nav {
     width: 100%;
-    margin-right: 0rem;
-    font-family: "Lato";
+    margin-right: 0.2rem;
+    padding-left: -0.5rem;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    margin-block-start: 0.01m;
+    margin-block: 0.01em;
   }
 
   .nav-groups {
@@ -65,6 +74,7 @@ const currentPageMatch = currentPage.endsWith("/")
     overflow-x: visible;
     overflow-y: auto;
     max-height: 100vh;
+    font-size: 1em;
   }
 
   .nav-groups > li + li {
@@ -76,7 +86,7 @@ const currentPageMatch = currentPage.endsWith("/")
   }
 
   .nav-groups > :last-child {
-    padding-bottom: 3git rem;
+    padding-bottom: 3rem;
     margin-bottom: var(--theme-navbar-height);
   }
 
