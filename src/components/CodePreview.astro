@@ -1,0 +1,70 @@
+---
+import { Code } from "astro/components"
+
+type Props = {
+    pythonCode: string,
+    javaCode: string,
+}
+
+const { pythonCode, javaCode } = Astro.props as Props;
+---
+
+
+<div>
+    <button class="python-switch language-switch active">Python</button>
+    <button id="java-switch" class="java-switch language-switch">Java</button>
+    <div class="language-python">
+        <Code code={pythonCode} lang="python" theme="one-dark-pro"/>
+    </div>
+    <div class="language-java" hidden>
+        <Code code={javaCode} lang="java" theme="one-dark-pro" />
+    </div>
+    <style>
+        .language-switch {
+            background: none;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0.5rem;
+            padding: 0;
+        }
+        .language-switch.active {
+            color: #00f;
+            text-decoration: underline;
+        }
+
+    </style>
+    <script>
+        const pythonSwitch = document.querySelectorAll(".python-switch");
+        const javaSwitch = document.querySelectorAll(".java-switch");
+
+        pythonSwitch.forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelector(".language-python").hidden = false;
+                document.querySelector(".language-java").hidden = true;
+                pythonSwitch.forEach((button) => {
+                    button.classList.add("active");
+                });
+                javaSwitch.forEach((button) => {
+                    button.classList.remove("active");
+                });
+                
+            });
+        });
+
+        javaSwitch.forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelector(".language-python").hidden = true;
+                document.querySelector(".language-java").hidden = false;
+                pythonSwitch.forEach((button) => {
+                    button.classList.remove("active");
+                });
+                javaSwitch.forEach((button) => {
+                    button.classList.add("active");
+                });
+            });
+        });
+    </script>
+</div>

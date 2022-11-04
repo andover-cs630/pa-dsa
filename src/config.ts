@@ -40,6 +40,7 @@ export const SIDEBAR: Sidebar = {
 	'Advanced Structures': [
 		{ text: 'Binary Search Tree', link: 'binary-search-trees' },
 		{ text: 'Hash Tables', link: 'hash-tables' },
+		{ text: 'RedBlackTrees', link: 'RedBlackTrees' },
 	],
 
 
@@ -47,6 +48,5 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Heapsort', link: 'heapsort' },
 		{ text: 'Quicksort', link: 'quicksort' },
 		{ text: 'Lower Bounds of Sorting', link: 'lower-bounds-of-sorting' },
-		{ text: 'Graphing Algorithms', link: 'graphing-algorithms' },
 	],
 };
