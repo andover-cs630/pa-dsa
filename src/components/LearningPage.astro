@@ -1,0 +1,173 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="learningStylesPage">
+    <h1 class="learningText"> Various Learning Styles </h1>
+    <div class="readings">
+        <h1 class="readingsText"> Readings </h1>
+        <div class="box">
+            <div class="rect">
+
+            </div>
+            <div class="quickSortExample">
+                <div class="quickSort">
+                    <h1 class="quickSortText"> Quick Sort </h1>
+                    <p1> Proin libero nunc consequat interdum varius. Egestas purus viverra accumsan in. Sagittis vitae et leo duis ut diam quam nulla porttitor. In mollis nunc sed id semper risus. Turpis nunc eget lorem dolor sed viverra ipsum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Gravida quis blandit turpis cursus in hac habitasse. Tincidunt dui ut ornare lectus sit amet est placerat in. Libero id faucibus nisl tincidunt eget nullam. Sed blandit libero volutpat sed cras ornare arcu. Dignissim enim sit amet venenatis urna. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Gravida quis blandit turpis cursus in hac habitasse platea. Id faucibus nisl tincidunt eget nullam non. Mi sit amet mauris </p1>    
+                </div>
+                <Button title="Read More" link="/quicksort" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/>
+            </div>
+        </div>
+    </div>
+    <div class="videos">
+        <h1 class="videosText"> Videos </h1>
+        <div class="video">
+            <iframe src="https://drive.google.com/file/d/1Q9Rul23upNs-mhCig4BZJm7qLsb5MTGZ/preview" />
+            <div class="videoSide">
+                <p1>"Some cool quote about how great our videos are yess yess yasssss" - Abby</p1>
+                <Button title="Watch" link="/" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="weirdblob">
+        <img src="/images/weirdBlob.svg">
+    </div>
+
+    <div class="practiceExercises">
+        <h1 class="practiceExerciseText"> Practice Exercises </h1>
+        <div class="practiceExercise">
+            <img class="practiceExerciseSVG" src="/images/practiceExercise.svg">
+            <Button title="Learn Now" link="/" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+    .learningStylesPage {
+        height: 300vh;
+        display: grid;
+        grid-auto-rows: minmax(min-content, max-content);
+    }
+
+    .learningText {
+        display: flex;
+        justify-content: center;
+        font-family: "Lato";
+        font-weight: 900;
+        font-size: 5rem;
+        padding-top: 4rem;
+        grid-column: 1;
+        grid-row: 1;
+        height: auto;
+    }
+
+    .readings {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .videos {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .readings, .videos, .practiceExercises {
+        margin-inline: 6.25rem;
+    }
+
+    .readings h1, .videos h1, .practiceExercises h1 {
+        font-family: "Lato";
+        margin: 0rem;
+    }
+
+    .readings p1, .videos p1 {
+        font-family: 'Open Sans';
+    }
+
+    .readingsText, .videosText, .practiceExerciseText {
+        font-weight: 900;
+        color: #EB3933;
+        font-size: 4rem;
+        padding-bottom: 1rem;
+        padding-top: 4rem;
+    }
+
+    .box {
+        width: auto;
+    }
+
+    .rect {
+        background: #5CC6FF;
+        height: 3.5rem;
+        border: 2px solid black;
+    }
+
+    .quickSortExample {
+        display: flex;
+        border-inline: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 2rem;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .quickSortText {
+        padding-bottom: 0.2rem;
+    }
+
+    .quickSort {
+        width: 60vw;
+    }
+
+    .videos iframe {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .video {
+        display: flex;
+        align-items: center;
+    }
+
+    .videos p1 {
+        font-size: 2rem;
+    }
+
+    .videoSide {
+        inline-size: 20rem;
+        overflow-wrap: break-word;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10vw;
+        gap: 4rem;
+    }
+
+    .videoSide p1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .videoSide LearnMoreButton {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .weirdblob {
+        grid-column: 1;
+        grid-row: 2;
+        z-index: -1;
+    }
+
+    .practiceExerciseSVG {
+        width: 100%;
+        margin: auto;
+    }
+</style>

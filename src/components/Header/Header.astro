@@ -1,126 +1,158 @@
 ---
-import * as CONFIG from '../../config';
-import Logo from './Logo.astro';
-import SkipToContent from './SkipToContent.astro';
-import SidebarToggle from './SidebarToggle.svelte';
+import Logo from "./Logo.astro";
+import { Icon } from 'astro-icon';
 ---
 
 <header>
-	<SkipToContent />
-	<nav class="nav-wrapper" title="Top Navigation">
-		<div class="menu-toggle">
-			<SidebarToggle client:idle client:only="svelte" />
-		</div>
-		<div class="logo flex">
+	<nav class="nav-wrapper">
+		<div class="logo">
 			<a href="/">
-				<Logo size={50} />
-				<h1 tabindex="0" style="color: white;">{CONFIG.SITE.title}</h1>
+				<Logo />
+				<h1>DATAL</h1>
 			</a>
+		</div>
+		<div class="navigation">
+			<div class="dropdowns">
+				<a href="/pointers-and-object-contents">
+					<div class="lessons">
+						<h1>Lessons</h1>
+					</div>
+				</a>
+				<a href="/introduction">
+					<div class="about">
+						<h1>About</h1>
+					</div>
+				</a>
+			</div>
+			<div class="menu">
+				<Icon name="ph:dots-three-bold" />
+			</div>
 		</div>
 	</nav>
 </header>
 
 <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 	header {
-		z-index: 11;
-		height: var(--theme-navbar-height);
-		width: 100%;
-		background-color: var(--theme-navbar-bg);
-		display: flex;
+		background-color: #0077b8;
+		height: 4rem;
 		align-items: center;
-		justify-content: center;
-		overflow: hidden;
+		display: flex;
 		position: sticky;
-		top: 0;
-	}
-
-	.logo {
-		flex: 1;
-		display: flex;
-		overflow: hidden;
-		width: 30px;
-		font-size: 2rem;
-		flex-shrink: 0;
-		font-weight: 600;
-		line-height: 1;
-		color: hsla(var(--color-base-white), 100%, 1);
-		gap: 0.5em;
-		z-index: -1;
-	}
-
-	.logo a {
-		display: flex;
-		padding: 0.5em 0.25em;
-		margin: -0.5em -0.25em;
-		text-decoration: none;
-		font-weight: bold;
-		transition: color 100ms ease-out;
-		color: var(--theme-text);
-		gap: 0.5em;
-	}
-
-	.logo a:hover,
-	.logo a:focus {
-		color: var(--theme-text-accent);
-	}
-
-	.logo h1 {
-		display: none;
-		font: inherit;
-		color: inherit;
+		box-shadow: 0 0.125rem 0 0 black;
 		margin: 0;
+		width: 100vw;
+		top: 0;
+		z-index: 10;
 	}
 
 	.nav-wrapper {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
-		gap: 1em;
-		width: 100%;
-		max-width: 82em;
-		padding: 0 1rem;
+		height: 4rem;
+		width: 100vw;
 	}
 
-	@media (min-width: 50em) {
-		header {
-			position: static;
-			padding: 2rem 0rem;
-		}
-
-		.logo {
-			width: auto;
-			margin: 0;
-			z-index: 0;
-		}
-
-		.logo h1 {
-			display: initial;
-		}
-
-		.menu-toggle {
-			display: none;
-		}
-	}
-
-	.search-item {
-		display: none;
-		position: relative;
-		z-index: 10;
-		flex-grow: 1;
-		padding-right: 0.7rem;
+	.logo a {
 		display: flex;
-		max-width: 200px;
+		gap: 0.5rem;
+		color: white;
+		text-decoration: none;
+		align-items: center;
+		text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+		padding-inline: 2rem;
 	}
 
-	@media (min-width: 50em) {
-		.search-item {
-			max-width: 400px;
+	.logo h1 {
+		font-family: "Lato", sans-serif;
+		font-weight: 900;
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	.navigation {
+		display: grid;
+		align-items: center;
+		/* margin-left: auto;
+		margin-right: 0; */
+
+	}
+
+	.lessons,
+	.about {
+		display: flex;
+		padding-inline: 3rem;
+		height: 4rem;
+		align-items: center;
+	}
+
+	.dropdowns a {
+		text-decoration: none;
+		color: white;
+		font-weight: 700;
+	}
+
+	.lessons:hover,
+	.about:hover {
+		background: #005D8F;
+	}
+
+	.dropdowns {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.dropdowns h1 {
+		color: white;
+		font-family: "Lato", sans-serif;
+		font-weight: 600;
+		font-size: 1.25rem;
+		margin: 0;
+	}
+
+	.menu {
+		grid-row: 1;
+		grid-column: 1;
+		visibility: hidden;
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		padding-inline: 1rem;
+	}
+
+	.menu:hover {
+		background: #005D8F;
+	}
+
+	
+	.icon {
+		grid-column: 1;
+		grid-row: 1;
+		margin-left: auto;
+		padding-right: 0.5rem;
+	}
+
+	@media only screen and (max-width: 1200px) {
+        .dropdowns {
+            display: none;
+        }
+		.menu {
+			visibility: visible;
 		}
-	}
-</style>
+    }
 
-<style is:global>
-	.search-item > * {
-		flex-grow: 1;
+	[astro-icon="ph:magnifying-glass-fill"] {
+		color: white;
+		height: 2rem;
+	}
+
+	[astro-icon="ph:dots-three-bold"] {
+		color: white;
+		height: 3rem;
 	}
 </style>

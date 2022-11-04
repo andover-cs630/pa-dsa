@@ -1,0 +1,51 @@
+---
+import { Icon } from 'astro-icon'
+
+const {title, link, color, shadow, highlight} = Astro.props
+---
+<a href={link}>
+    <div class="button">
+        <h1> {title} </h1>
+        <Icon name="ph:caret-right-duotone" />
+    </div>
+</a>
+
+<style define:vars={{title, link, color, shadow, highlight}}> 
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    .button {
+        background-color: var(--color);
+        height: 4rem;
+        width: 13.5rem;
+        display: flex;
+        box-shadow: 0.15rem 0.15rem 5px var(--shadow);
+        border-radius: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+   .button h1 {
+        color: white;
+        font-weight: 800;
+		font-size: 1.8rem;
+        stroke: black; 
+        stroke-width: 0.125rem;
+        font-family: "Lato";  
+    }
+
+    .button:hover {
+        background-color: var(--highlight);
+        box-shadow: 0.15rem 0.15rem 5px var(--shadow);
+    }
+
+    [astro-icon] {
+		color: white;
+		height: 2rem;
+	}
+</style>

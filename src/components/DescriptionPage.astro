@@ -1,0 +1,92 @@
+<body>
+    <div class="descriptionPage">
+        <div class="descriptionText">
+            <h1> Thorough, Well-Researched, </h1> <br/>
+            <h1> In-Depth Lessons </h1>
+            <div class="descriptionText">
+                <h4> Some really good description about the work we have put into this project </h4>
+                <h4> Some really good description about the work we have put into this project </h4>
+            </div>
+        </div>
+        <div class="examplePost">
+            <img src="/images/examplePost.svg">
+        </div>
+        <div class="starShapes">
+            <img class="starLeft" src="/images/starShape.svg">
+            <img class="starRight" src="/images/starShape.svg">
+        </div>
+    </div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+    .descriptionPage {
+        height: 90vh;
+        font-family: "Lato";
+        margin-top: 3rem;
+        margin-left: 3rem;
+        display: grid;
+        overflow: hidden;
+    }
+
+    .descriptionText {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .descriptionPage h1 {
+        color: #5CC6FF;
+        font-size: 6rem;
+        margin: 0;
+        font-weight: 900;
+    }
+
+    .descriptionText h4 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        width: 40rem;
+    }
+
+    .examplePost {
+        grid-column: 1;
+        grid-row: 1;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-top: auto;
+    }
+    
+    .examplePost img {
+        width: 40vw;
+    }
+
+    .starShapes {
+        grid-column: 1;
+        grid-row: 1;
+        height: 90vh;
+        display: flex;
+    }
+
+    .starLeft {
+        margin-bottom: -2rem;
+        margin-top: auto;
+        width: 200px;
+    }
+
+    .starRight {
+        margin-right: -1rem;
+        margin-left: auto;
+        margin-top: -1rem;
+        margin-bottom: auto;
+        width: 200px;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        .examplePost {
+            display: none;
+        }
+    }
+    </style>
