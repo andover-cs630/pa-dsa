@@ -14,6 +14,7 @@
   "devDependencies": {
     "@astrojs/mdx": "^0.11.4",
     "@astrojs/svelte": "^1.0.1",
+    "@playwright/test": "^1.27.1",
     "@types/node": "^18.8.2",
     "astro": "^1.4.5",
     "astro-m2dx": "^0.4.5",
