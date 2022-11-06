@@ -1,23 +1,37 @@
 <body>
-    <div class="ExamplePage">
-        <h1> Examples in Java and Python </h1> <br/>
-        <img class="sampleCode" src="/images/sample-code.svg">
+    <div class="examplePage">
+        <h1 class="examplePageHeader"> Examples in Java and Python </h1> <br/>
+        <div class="code">
+            <img class="examplePageBackground" src="/images/exampleBackground.svg">
+            <div class="exampleCode">
+                <div class="javaExample">
+                    <h1> queues.java </h1>
+                    <p1></p1>
+                </div>
+                <div class="pythonExample">
+                    <h1> queues.py </h1>
+                    <p1></p1>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-    .ExamplePage {
-        height: 40rem;
+    
+    .examplePage {
         width: 100%;
         background: #e8e8e8;
     }
 
-    .sampleCode {
-        width: 100vw;
+    .exampleCode h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 2vw;
+        font-weight: 400;
     }
 
-    .ExamplePage h1 {
+    .examplePageHeader {
         font-family: 'Lato', sans-serif;
         color: #000000;
         text-align: center;
@@ -25,5 +39,40 @@
         font-weight: 900;
         margin: 0;
         padding: 3rem;
+    }
+
+    .code {
+        display: grid;
+    }
+
+    .examplePageBackground {
+        width: 100vw;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .exampleCode {
+        display: grid;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .javaExample {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .pythonExample {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .exampleCode {
+        margin-left: 7vw;
+    }
+
+    .javaExample h1, .pythonExample h1 {
+        margin: 0;
+        margin-top: -0.1vw;
     }
 </style>
