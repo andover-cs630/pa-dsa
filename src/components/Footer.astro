@@ -4,6 +4,30 @@ import Logo from "./Header/Logo.astro";
 
 <div class="footer">
 	<h1> DATAL </h1>
+	<div class="information">
+		<a href="https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf">
+		<h5> Introduction to Data Structures and Algorithms </h5></a>
+		<ul>
+			<li>Thomas H. Cormen</li>
+			<li>Charles E. Leiserson</li>
+			<li>Ronald L. Rivest</li>
+			<li>Clifford Stein</li>
+		</ul>
+	</div>
+	<div class="information">
+		<h5>copyright CSC630- 2022 © </h5>
+		<p>MIT Liscence </p>
+	</div>
+	<div class="information">
+		<h5>Notice</h5>
+		<p>Datal is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.  </p>
+	</div>
+	<div class="information">
+		<h5>Contact</h5>
+		<p>csc630@gmail.com</p>
+	</div>
+	
+	
 </div>
 
 <style>
@@ -11,19 +35,46 @@ import Logo from "./Header/Logo.astro";
 
 	.footer {
 		background: #0077B8;
-		height: 40vh;
+		/* height: 10vh; */
 		margin: 0;
 		padding: 0;
 		display: flex;
+		font-family: "Lato";
 	}
 
 	.footer h1 {
-		margin-bottom: 1rem;
+		margin-bottom: auto;
 		margin-top: auto;
 		color: white;
-		font-family: "Lato";
 		font-weight: 900;
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-left: 1rem;
 	}
+
+	.information {
+		color: rgb(255, 255, 255, 0.5);
+		padding: 10px;
+		font-weight: 600;
+		max-width: 40%;
+	}
+
+	.information h5, ul {
+		margin: 0px;
+	}
+
+	li, p {
+		font-weight: 300;
+		text-decoration: none;
+		list-style: none;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		color: rgb(255, 255, 255, 0.5);
+	}
+
 </style>
