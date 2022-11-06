@@ -39,11 +39,15 @@ nav ol {
 }
 
 .content > section > * + * {
-	margin-top: 1.25rem;
+	/* margin-top: 0px; */
+}
+
+hr {
+	margin-top: 50px;
 }
 
 .content > section > :first-child {
-	margin-top: 0;
+	margin-top: 10px;
 }
 
 /* Typography */
@@ -132,7 +136,7 @@ article > section li > :is(p, pre, blockquote):not(:first-child) {
 }
 
 article > section :is(ul, ol) {
-	padding-left: 1em;
+	padding-left: 2em;
 }
 
 article > section nav :is(ul, ol) {
@@ -265,6 +269,7 @@ pre {
 
 blockquote code {
 	background-color: var(--theme-bg);
+	
 }
 
 @media (min-width: 37.75em) {
@@ -276,17 +281,34 @@ blockquote code {
 	}
 }
 
+*, html {
+    margin:0;
+    padding:0;  
+}
+
 blockquote {
-	margin: 1.5rem 0;
-	padding: 1.25em 1.5rem;
-	border-left: 3px solid var(--theme-text-light);
+	margin-top:5px;
+	margin-bottom:5px;
+
+	padding: 1em 1.2rem;
+	border-left: 5px solid #0077b8;
 	background-color: #F2F2F2;
 	border-radius: 0 0.25rem 0.25rem 0;
 	line-height: 1.7;
 }
 
 img {
+
+	display:block;
+
 	max-width: 100%;
+	max-height: 400px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .flex {
