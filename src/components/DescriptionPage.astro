@@ -1,3 +1,7 @@
+---
+import Stacks from "./Stacks.astro";
+---
+
 <body>
     <div class="descriptionPage">
         <div class="descriptionText">
@@ -9,7 +13,7 @@
             </div>
         </div>
         <div class="examplePost">
-            <img src="/images/examplePost.svg">
+            <Stacks />
         </div>
         <div class="starShapes">
             <img class="starLeft" src="/images/starShape.svg" aria-hidden="true">
@@ -28,7 +32,8 @@
         margin-top: 3rem;
         margin-left: 3rem;
         display: grid;
-        overflow: hidden;
+        overflow: visible;
+		box-shadow: 0 0.125rem 0 0 black;
     }
 
     .descriptionText {
@@ -57,10 +62,6 @@
         margin-bottom: 3rem;
         margin-left: auto;
         margin-top: auto;
-    }
-    
-    .examplePost img {
-        width: 40vw;
     }
 
     .starShapes {
