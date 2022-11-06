@@ -5,12 +5,27 @@
             <img class="examplePageBackground" src="/images/exampleBackground.svg">
             <div class="exampleCode">
                 <div class="javaExample">
-                    <h1> queues.java </h1>
-                    <p1></p1>
+                    <h1> linkedList.java </h1>
+                    <p1>
+                        class Node &#123; <br>
+                        &emsp;int data; <br>
+                        &emsp;Node next; <br>
+                        <br>    
+                        &emsp;Node(int data) &#123;	 <br>
+                        &emsp;&emsp;this.data = data; <br>
+                        &emsp;&rbrace; <br>
+                        &rbrace;
+                    </p1>
                 </div>
                 <div class="pythonExample">
-                    <h1> queues.py </h1>
-                    <p1></p1>
+                    <h1> linkedList.py </h1>
+                    <p1>
+                        # Function to initialize the linked list object <br>
+                        class LinkedListNode(object): <br>
+                        &emsp;def __init__(self, data): <br>
+                        &emsp;&emsp;self.data = data # Assign data <br>
+                        &emsp;&emsp;self.next = None # Initialize
+                    </p1>
                 </div>
             </div>
         </div>
@@ -18,6 +33,7 @@
 </body>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
     
     .examplePage {
@@ -55,20 +71,46 @@
         display: grid;
         grid-column: 1;
         grid-row: 1;
+        margin-left: 7vw;
     }
 
     .javaExample {
         grid-column: 1;
         grid-row: 1;
+        width: 50vw;
+        display: grid;
+    }
+
+    .javaExample h1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .javaExample p1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .javaExample p1, .pythonExample p1 {
+        font-family: "Source Code Pro";
+        font-size: 1.25rem;
     }
 
     .pythonExample {
         grid-column: 2;
         grid-row: 1;
+        width: 50vw;
+        display: grid;
     }
 
-    .exampleCode {
-        margin-left: 7vw;
+    .pythonExample  h1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .pythonExample p1 {
+        grid-column: 1;
+        grid-row: 2;
     }
 
     .javaExample h1, .pythonExample h1 {
