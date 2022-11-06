@@ -28,7 +28,7 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Pointers & Objects', link: 'Markdown/pointers-and-object-contents' },
 	],
 	'Elementary Structures': [
-		{ text: 'Introduction to Graphs', link: 'Markdown/introduction-to-graphs' },
+		{ text: 'Introduction to Graphs', link: '	introduction-to-graphs/' },
 		{ text: 'Linked List', link: 'Markdown/LinkedList' },
 		{ text: 'Queues', link: 'Markdown/queues' },
 	],
@@ -43,5 +43,6 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Heapsort', link: 'Markdown/heapsort' },
 		{ text: 'Quicksort', link: 'Markdown/quicksort' },
 		{ text: 'Lower Bounds of Sorting', link: 'Markdown/lower-bounds-of-sorting' },
+		{ text: 'Graphing Algorithms', link: 'Markdown/graphing-algorithms' },
 	],
 };
