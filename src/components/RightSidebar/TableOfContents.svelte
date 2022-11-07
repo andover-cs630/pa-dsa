@@ -19,3 +19,9 @@
         </li>
     {/each}
 </ol>
+
+<style>
+    a {
+        color: blue;
+    }
+</style>
