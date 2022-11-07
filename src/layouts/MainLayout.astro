@@ -60,7 +60,6 @@ const currentPage = Astro.url.pathname;
 				position: fixed;
 				background-color: var(--theme-bg);
 				display: flex;
-				outline: 1px dotted orange;
 			}
 
 			#grid-main {
@@ -70,12 +69,10 @@ const currentPage = Astro.url.pathname;
 				flex-direction: column;
 				height: 100%;
 				/* width: 60vw; */
-				outline: 1px dotted orange;
 			}
 
 			#grid-right {
 				display: flex;
-				outline: 1px dotted orange;
 			}
 
 			@media (min-width: 50em) {
@@ -95,7 +92,8 @@ const currentPage = Astro.url.pathname;
 
 			@media (min-width: 72em) {
 				.layout {
-					grid-template-columns: 16rem 60vw 16rem;
+					/* grid-template-columns: 16rem 60vw 16rem; */
+					grid-template-columns: 25% 50% 21%;
 					padding-left: 0;
 					padding-right: 0;
 					margin: 0 auto;
