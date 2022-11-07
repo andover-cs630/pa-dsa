@@ -5,24 +5,33 @@
         <div class="dropdown">
 
             <h2>Introduction</h2>
-            <div><a href="/Markdown/introduction" class="link"> Introduction </a></div>
-            <div><a href="/Markdown/pointers-and-object-contents" class="link"> Pointers & Objects </a></div>
-
+            <div class="list">
+                <div><a href="/Markdown/introduction" class="link"> Introduction </a></div>
+                <div><a href="/Markdown/pointers-and-object-contents" class="link"> Pointers & Objects </a></div>
+            </div>    
             <h2>Elementary Structures</h2>
-            <div><a href="/introduction-to-graphs" class="link"> Introduction to Graphs </a></div>
-            <div><a href="/Markdown/LinkedList" class="link"> Linked List </a></div>
-            <div><a href="/Markdown/queues" class="link"> Queues </a></div>
+            <div class="list">
+                <div><a href="/introduction-to-graphs" class="link"> Introduction to Graphs </a></div>
+                <div><a href="/Markdown/LinkedList" class="link"> Linked List </a></div>
+                <div><a href="/Markdown/queues" class="link"> Queues </a></div>
+            </div>
+
 
             <h2>Advanced Structures</h2>
-            <div><a href="/Markdown/binary-search-trees" class="link"> Binary Search Tree </a></div>
-            <div><a href="/Markdown/hash-tables" class="link"> Hash Tables </a></div>
-            <div><a href="/Markdown/RedBlackTrees" class="link"> Red Black Trees  </a></div>
+            <div class="list">
+                <div><a href="/Markdown/binary-search-trees" class="link"> Binary Search Tree </a></div>
+                <div><a href="/Markdown/hash-tables" class="link"> Hash Tables </a></div>
+                <div><a href="/Markdown/RedBlackTrees" class="link"> Red Black Trees  </a></div>
+            </div>
+            
 
             <h2>Algorithms</h2>
-            <div><a href="/Markdown/Heapsort" class="link"> HeapSort </a></div>
-            <div><a href="/Markdown/quicksort" class="link"> QuickSort </a></div>
-            <div><a href="/Markdown/lower-bounds-of-sorting" class="link"> Lower Bounds of Sorting  </a></div>
-            <div><a href="/Markdown/graphing-algorithms" class="link"> Graphing Algorithms </a></div>
+            <div class="list">
+                <div><a href="/Markdown/Heapsort" class="link"> HeapSort </a></div>
+                <div><a href="/Markdown/quicksort" class="link"> QuickSort </a></div>
+                <div><a href="/Markdown/lower-bounds-of-sorting" class="link"> Lower Bounds of Sorting  </a></div>
+                <div><a href="/Markdown/graphing-algorithms" class="link"> Graphing Algorithms </a></div>
+            </div>
 
         </div>
     </body>
@@ -63,6 +72,10 @@
         margin: 8px;
     }
 
+    .list {
+        margin-bottom: 5px;
+    }
+
     .hover {
         position:absolute;
         height: 20px;
@@ -82,7 +95,7 @@
         backdrop-filter: blur(6px);
 		background-color: rgb(185, 223, 254, 0.85);
         
-		padding-top: 10px;
+		padding-top: 5px;
         padding-bottom: 10px;
 		overflow: auto;
 	}
