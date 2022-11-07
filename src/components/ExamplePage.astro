@@ -2,9 +2,10 @@
     <div class="examplePage">
         <h1 class="examplePageHeader"> Examples in Java and Python </h1> <br/>
         <div class="code">
-            <img class="examplePageBackground" src="/images/exampleBackground.svg">
+            <img class="redRectangle" src="/images/redRectangle.svg" />
             <div class="exampleCode">
                 <div class="javaExample">
+                    <img src="/images/codeBackground.svg" />
                     <h1> linkedList.java </h1>
                     <p1>
                         class Node &#123; <br>
@@ -18,6 +19,7 @@
                     </p1>
                 </div>
                 <div class="pythonExample">
+                    <img src="/images/codeBackground.svg" />
                     <h1> linkedList.py </h1>
                     <p1>
                         # Function to initialize the linked list object <br>
@@ -39,11 +41,12 @@
     .examplePage {
         width: 100%;
         background: #e8e8e8;
+        overflow-x: hidden;
     }
 
     .exampleCode h1 {
         font-family: 'Lato', sans-serif;
-        font-size: 2vw;
+        font-size: 2rem;
         font-weight: 400;
     }
 
@@ -61,6 +64,13 @@
         display: grid;
     }
 
+    .redRectangle {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+    }
+
     .examplePageBackground {
         width: 100vw;
         grid-column: 1;
@@ -71,7 +81,6 @@
         display: grid;
         grid-column: 1;
         grid-row: 1;
-        margin-left: 7vw;
     }
 
     .javaExample {
@@ -79,21 +88,21 @@
         grid-row: 1;
         width: 50vw;
         display: grid;
+        justify-content: center;
     }
 
-    .javaExample h1 {
+    .javaExample img {
         grid-column: 1;
         grid-row: 1;
     }
 
-    .javaExample p1 {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
     .javaExample p1, .pythonExample p1 {
         font-family: "Source Code Pro";
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 1rem;
+        margin-top: 5rem;
     }
 
     .pythonExample {
@@ -101,20 +110,19 @@
         grid-row: 1;
         width: 50vw;
         display: grid;
+        justify-content: center;
     }
 
-    .pythonExample  h1{
+    .pythonExample img {
         grid-column: 1;
         grid-row: 1;
-    }
-
-    .pythonExample p1 {
-        grid-column: 1;
-        grid-row: 2;
     }
 
     .javaExample h1, .pythonExample h1 {
         margin: 0;
         margin-top: -0.1vw;
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 1rem;
     }
 </style>
