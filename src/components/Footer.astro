@@ -5,7 +5,7 @@ import Logo from "./Header/Logo.astro";
 <div class="footer">
 	<h1> DATAL </h1>
 	<div class="information">
-		<a href="https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf">
+		<a href="https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/">
 		<h5> Introduction to Data Structures and Algorithms </h5></a>
 		<ul>
 			<li>Thomas H. Cormen</li>
@@ -15,8 +15,8 @@ import Logo from "./Header/Logo.astro";
 		</ul>
 	</div>
 	<div class="information">
-		<h5>copyright CSC630- 2022 © </h5>
-		<p>MIT Liscence </p>
+		<h5>Copyright CSC630- 2022 © </h5>
+		<p>MIT License </p>
 	</div>
 	<div class="information">
 		<h5>Notice</h5>
@@ -32,10 +32,9 @@ import Logo from "./Header/Logo.astro";
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+	
 	.footer {
 		background: #0077B8;
-		/* height: 10vh; */
 		margin: 0;
 		padding: 0;
 		display: flex;
@@ -56,10 +55,15 @@ import Logo from "./Header/Logo.astro";
 		padding: 10px;
 		font-weight: 600;
 		max-width: 40%;
+		margin-top: 0.75em;
 	}
 
-	.information h5, ul {
-		margin: 0px;
+	.information h5 {
+		margin: 0;
+	}
+
+	.information ul, p {
+		margin-top: 6px;
 	}
 
 	li, p {
