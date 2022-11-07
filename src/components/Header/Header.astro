@@ -1,6 +1,7 @@
 ---
 import Logo from "./Logo.astro";
 import { Icon } from 'astro-icon';
+import Dropdown from "./Dropdown.astro";
 ---
 
 <header>
@@ -13,12 +14,15 @@ import { Icon } from 'astro-icon';
 		</div>
 		<div class="navigation">
 			<div class="dropdowns">
-				<a href="/pointers-and-object-contents">
+				<div class="lesson-dropdown">
 					<div class="lessons">
 						<h1>Lessons</h1>
 					</div>
-				</a>
-				<a href="/introduction">
+					<div class="dropdown">
+						<Dropdown/>
+					</div>
+				</div>
+				<a href="/Markdown/introduction">
 					<div class="about">
 						<h1>About</h1>
 					</div>
@@ -77,7 +81,6 @@ import { Icon } from 'astro-icon';
 		align-items: center;
 		/* margin-left: auto;
 		margin-right: 0; */
-
 	}
 
 	.lessons,
@@ -97,6 +100,20 @@ import { Icon } from 'astro-icon';
 	.lessons:hover,
 	.about:hover {
 		background: #005D8F;
+	}
+
+	.lessons {
+		/* background-color: purple; */
+	}
+
+	.dropdown {
+		display: none;
+	}
+
+	.lesson-dropdown:hover > .dropdown {
+		display: block;
+		animation-name: fade;	
+		animation-duration: 1ms;
 	}
 
 	.dropdowns {

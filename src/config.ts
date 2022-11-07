@@ -24,28 +24,26 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	'Intro': [
-		{ text: 'Introduction', link: 'introduction' },
-		{ text: 'Pointers & Objects', link: 'pointers-and-object-contents' },
+		{ text: 'Introduction', link: 'Markdown/introduction' },
+		{ text: 'Pointers & Objects', link: 'Markdown/pointers-and-object-contents' },
 	],
 	'Elementary Structures': [
-		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs' },
-		{ text: 'Linked List', link: 'LinkedList' },
-		{ text: 'Queues', link: 'queues' },
-
-		// { text: 'Inline Code Snippets', link: 'code-snippets' },
-		// { text: 'Inline Images', link: 'inline-images' },
-		// { text: 'Inline Images 2', link: 'inline-images-2' },
+		{ text: 'Introduction to Graphs', link: '	introduction-to-graphs/' },
+		{ text: 'Linked List', link: 'Markdown/LinkedList' },
+		{ text: 'Queues', link: 'Markdown/queues' },
+		{ text: 'Rooted Trees', link: 'Markdown/rooted-trees' },
 	],
 
 	'Advanced Structures': [
-		{ text: 'Binary Search Tree', link: 'binary-search-trees' },
-		{ text: 'Hash Tables', link: 'hash-tables' },
-		{ text: 'Red Black Trees', link: 'RedBlackTrees' },
+		{ text: 'Binary Search Tree', link: 'Markdown/binary-search-trees' },
+		{ text: 'Hash Tables', link: 'Markdown/hash-tables' },
+		{ text: 'Red Black Trees', link: 'Markdown/RedBlackTrees' },
 	],
 
 	'Algorithms': [
-		{ text: 'Heapsort', link: 'heapsort' },
-		{ text: 'Quicksort', link: 'quicksort' },
-		{ text: 'Lower Bounds of Sorting', link: 'lower-bounds-of-sorting' },
+		{ text: 'Heapsort', link: 'Markdown/heapsort' },
+		{ text: 'Quicksort', link: 'Markdown/quicksort' },
+		{ text: 'Lower Bounds of Sorting', link: 'Markdown/lower-bounds-of-sorting' },
+		{ text: 'Graphing Algorithms', link: 'Markdown/graphing-algorithms' },
 	],
 };

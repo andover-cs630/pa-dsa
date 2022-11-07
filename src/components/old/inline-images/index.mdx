@@ -1,0 +1,21 @@
+---
+title: Inline Images
+description: A demonstration of inlined images in Astro with MDX files.
+layout: "@main"
+---
+
+import poly from "./poly-grid.svg"
+import peaks from "./stacked-peaks.svg"
+import campus from "./campus.jpg"
+
+In `.mdx` files (**not** `.md` files!), images can be included using relative imports and the `<img>` tag. This allows images to be colocated with the articles they belong to instead of putting every article image in the `public` directory.
+
+Note that `<img>` tags must take the form `<img ... />` instead of `<img ... >` in MDX, despite being valid HTML [void elements](https://www.w3.org/TR/2011/WD-html-markup-20110113/syntax.html#void-element).
+
+## Example Gallery
+
+<img src={poly} alt="A grid tiled by triangles of different shapes and sizes"/>
+
+<img src={peaks} alt="A gradient of jagged color bands"/>
+
+<img src={campus} alt="A picture of the Phillips Academy campus during winter"/>
