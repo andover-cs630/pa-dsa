@@ -1,23 +1,56 @@
 <body>
-    <div class="ExamplePage">
-        <h1> Examples in Java and Python </h1> <br/>
-        <img id="" class="sampleCode" src="/images/sample-code.svg">
+    <div class="examplePage">
+        <h1 class="examplePageHeader"> Examples in Java and Python </h1> <br/>
+        <div class="code">
+            <img class="redRectangle" src="/images/redRectangle.svg" />
+            <div class="exampleCode">
+                <div class="javaExample">
+                    <img src="/images/codeBackground.svg" />
+                    <h1> linkedList.java </h1>
+                    <p1>
+                        class Node &#123; <br>
+                        &emsp;int data; <br>
+                        &emsp;Node next; <br>
+                        <br>    
+                        &emsp;Node(int data) &#123;	 <br>
+                        &emsp;&emsp;this.data = data; <br>
+                        &emsp;&rbrace; <br>
+                        &rbrace;
+                    </p1>
+                </div>
+                <div class="pythonExample">
+                    <img src="/images/codeBackground.svg" />
+                    <h1> linkedList.py </h1>
+                    <p1>
+                        # Function to initialize the linked list object <br>
+                        class LinkedListNode(object): <br>
+                        &emsp;def __init__(self, data): <br>
+                        &emsp;&emsp;self.data = data # Assign data <br>
+                        &emsp;&emsp;self.next = None # Initialize
+                    </p1>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-    .ExamplePage {
-        height: 40rem;
+    
+    .examplePage {
         width: 100%;
         background: #e8e8e8;
+        overflow-x: hidden;
     }
 
-    .sampleCode {
-        width: 100vw;
+    .exampleCode h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
     }
 
-    .ExamplePage h1 {
+    .examplePageHeader {
         font-family: 'Lato', sans-serif;
         color: #000000;
         text-align: center;
@@ -25,5 +58,71 @@
         font-weight: 900;
         margin: 0;
         padding: 3rem;
+    }
+
+    .code {
+        display: grid;
+    }
+
+    .redRectangle {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    .examplePageBackground {
+        width: 100vw;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .exampleCode {
+        display: grid;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .javaExample {
+        grid-column: 1;
+        grid-row: 1;
+        width: 50vw;
+        display: grid;
+        justify-content: center;
+    }
+
+    .javaExample img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .javaExample p1, .pythonExample p1 {
+        font-family: "Source Code Pro";
+        font-size: 1.2rem;
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 1rem;
+        margin-top: 5rem;
+    }
+
+    .pythonExample {
+        grid-column: 2;
+        grid-row: 1;
+        width: 50vw;
+        display: grid;
+        justify-content: center;
+    }
+
+    .pythonExample img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .javaExample h1, .pythonExample h1 {
+        margin: 0;
+        margin-top: -0.1vw;
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 1rem;
     }
 </style>

@@ -7,13 +7,11 @@ import Button from "./Button.astro";
     <div class="readings">
         <h1 class="readingsText"> Readings </h1>
         <div class="box">
-            <div class="rect">
-
-            </div>
+            <div class="rect"></div>
             <div class="quickSortExample">
                 <div class="quickSort">
                     <h1 class="quickSortText"> Quick Sort </h1>
-                    <p1> Proin libero nunc consequat interdum varius. Egestas purus viverra accumsan in. Sagittis vitae et leo duis ut diam quam nulla porttitor. In mollis nunc sed id semper risus. Turpis nunc eget lorem dolor sed viverra ipsum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Gravida quis blandit turpis cursus in hac habitasse. Tincidunt dui ut ornare lectus sit amet est placerat in. Libero id faucibus nisl tincidunt eget nullam. Sed blandit libero volutpat sed cras ornare arcu. Dignissim enim sit amet venenatis urna. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Gravida quis blandit turpis cursus in hac habitasse platea. Id faucibus nisl tincidunt eget nullam non. Mi sit amet mauris </p1>    
+                    <p1> Quicksort works by partitioning an array based on an arbitrary element in the array, which we will refer to as p. The array is divided into two subarrays, one which contains elements larger than p, and one which contains elements smaller than p. The operation is then repeated with each of the subarrays, with a new p for each subarray, until the array is separated into sub-arrays with a designated length, usually 1. p is also known as the pivot. </p1>    
                 </div>
                 <Button title="Read More" link="/Markdown/quicksort" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/>
             </div>
@@ -24,7 +22,6 @@ import Button from "./Button.astro";
         <div class="video">
             <iframe src="https://drive.google.com/file/d/1Q9Rul23upNs-mhCig4BZJm7qLsb5MTGZ/preview" />
             <div class="videoSide">
-                <p1>"Some cool quote about how great our videos are yess yess yasssss" - Abby</p1>
                 <Button title="Watch" link="/" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
             </div>
         </div>
@@ -37,8 +34,24 @@ import Button from "./Button.astro";
     <div class="practiceExercises">
         <h1 class="practiceExerciseText"> Practice Exercises </h1>
         <div class="practiceExercise">
-            <img class="practiceExerciseSVG" src="/images/practiceExercise.svg">
-            <Button title="Learn Now" link="/Markdown/Heapsort" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
+            <div class="exercise">
+                <p1>
+                    When would QuickSort take O(n<sup>2</sup>) time to sort?
+                </p1>
+                <Button title="Try it" link="/Markdown/quicksort" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/>
+            </div>
+            <div class="exercise">
+                <p1>
+                    Why do we use decision trees to model binary search?
+                </p1>
+                <Button title="Try it" link="/Markdown/binary-search-trees" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/>
+            </div>
+            <div class="exercise">
+                <p1>
+                    Do queues handle multiple data types?
+                </p1>
+                <Button title="Try it" link="/Markdown/queues" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/>
+            </div>
         </div>
     </div>
 
@@ -51,6 +64,7 @@ import Button from "./Button.astro";
     .learningStylesPage {
         display: grid;
         grid-auto-rows: minmax(min-content, max-content);
+        overflow-x: hidden;
     }
 
     .learningText {
@@ -62,7 +76,6 @@ import Button from "./Button.astro";
         padding-top: 4rem;
         grid-column: 1;
         grid-row: 1;
-        height: auto;
     }
 
     .readings {
@@ -125,8 +138,8 @@ import Button from "./Button.astro";
     }
 
     .videos iframe {
-        width: 50vw;
-        height: 50vh;
+        width: 65vw;
+        height: 65vh;
     }
 
     .video {
@@ -145,7 +158,7 @@ import Button from "./Button.astro";
         display: grid;
         align-items: center;
         justify-content: center;
-        margin-left: 10vw;
+        margin-left: 5.55vw;
         gap: 4rem;
     }
 
@@ -160,12 +173,22 @@ import Button from "./Button.astro";
         z-index: -1;
     }
 
-    .practiceExerciseSVG {
-        width: 100%;
-    }
-
     .practiceExercises {
         margin-bottom: 3rem;
+    }
+
+    .exercise {
+        background: #f2f2f2;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+    }
+
+    .exercise p1 {
+        font-family: "Open Sans";
+        font-size: 1.5rem;
     }
 
 </style>
