@@ -12,7 +12,7 @@ layout: "@main"
 
 The motivation behind dynamic programming lies in a single idea—why do something many times when you only need to do it once? Unlike some other algorithms, there isn’t one way to implement dynamic programming. Instead, DP is a method that can be used in a plethora of different problems to reduce runtime.
 
-To see a simple example of dynamic programming, we turn to the problem of finding the nth [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number). A naive way of approaching the problem is to use recursion.
+To see a simple example of dynamic programming, we turn to the problem of finding the $\text{n}^{\text{th}}$ [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number). A naive way of approaching the problem is to use recursion.
 
 ```python
 def fibonacci(n):

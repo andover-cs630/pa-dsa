@@ -1,5 +1,5 @@
 ---
-title: "Graphing"
+title: Graphing Algorithms
 description: "Comprehensive overview of Graphing Algorithms and Graphing Structures"
 layout: "@main"
 ---

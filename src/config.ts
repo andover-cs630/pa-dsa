@@ -26,7 +26,6 @@ export const SIDEBAR: Sidebar = {
 	'Intro': [
 		{ text: 'Introduction', link: 'Markdown/introduction' },
 		{ text: 'Prerequisites', link: 'Markdown/prerequisites' },
-		{ text: 'Dynamic Programming', link: 'Markdown/dynamicprogramming' },
 		{ text: 'Pointers & Objects', link: 'Markdown/pointers-and-object-contents' },
 	],
 	'Elementary Structures': [
@@ -46,7 +45,9 @@ export const SIDEBAR: Sidebar = {
 	'Algorithms': [
 		{ text: 'Heapsort', link: 'Markdown/Heapsort' },
 		{ text: 'Quicksort', link: 'Markdown/quicksort' },
+		{ text: 'Counting Sort', link: 'Markdown/counting-sort' },
 		{ text: 'Lower Bounds of Sorting', link: 'Markdown/lower-bounds-of-sorting' },
 		{ text: 'Graphing Algorithms', link: 'Markdown/graphing-algorithms' },
+		{ text: 'Dynamic Programming', link: 'Markdown/dynamicprogramming' },
 	],
 };
