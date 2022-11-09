@@ -4,6 +4,10 @@ description: An important detail when engaging with a variety of Search Algorith
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1 Search Algorithms**
 
 To define the lower bounds of searching and sorting, we will look at this concept through the comparison model. This model defines every input as a black box data type, restricting the operations on that data type to comparisons (only, =, <, >, <=, >=). In this model, the only way to evaluate inputs is through comparisons (think of merge sort and [heapsort](/Markdown/Heapsort)). To measure the time cost in this model, we will count the number of comparisons made in the sorting or searching algorithms.
@@ -106,6 +110,7 @@ public class BinarySearchTesting {
 ```
 
 **Python:**
+
 ```python
 import random
 # Algorithm to count to number of array accesses in binary search

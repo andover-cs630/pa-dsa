@@ -4,6 +4,10 @@ description: counting sort
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1: Sorting in Linear Time**
 
 There are many existing algorithms which sort collections of things, usually in the forms of arrays, trees, heaps, etc into a prefixed order (usually increasing or decreasing).
@@ -78,8 +82,14 @@ No matter what the initial array $O$ is, the same steps are performed, so the ru
 
 ### Exercise
 
-**Question**: In a stable sorting algorithm, when there are multiple instances of the same element, they will appear in the output array in the same order as they appeared in the input array. Is Counting Sort stable? Why or Why not?
-**Answer**: Yes, as the algorithm moves left to right, so it places instances of the same element that occur later in the array after previous instances.
+> 1. In a stable sorting algorithm, when there are multiple instances of the same element, they will appear in the output array in the same order as they appeared in the input array. Is Counting Sort stable? Why or Why not?
+
+<details>
+    <md-block>
+    Yes, as the algorithm moves left to right, so it places instances of the same element that occur later in the array after previous instances.
+    </md-block>
+<summary>Answer</summary>
+</details>
 
 ### Code Example: java
 

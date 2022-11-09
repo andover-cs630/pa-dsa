@@ -4,6 +4,10 @@ description: An article on queues, basic methods, and implementations in python 
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1: Queues**
 
 Imagine you’re at a restaurant waiting for seating, purchasing movie tickets, or waiting in the lunch line—all these examples have one thing in common—the first person to enter the queue is the first person to exit the queue.
@@ -88,20 +92,25 @@ Queues can be implemented in the form of an array with a [pointer](/Markdown/poi
 
 ### Basic
 
-1. What does FIFO stand for?
-2. Do queues handle multiple data types?
-3. What is an enqueue?
-4. What is a dequeue?
+> 1. What does FIFO stand for?
+
+> 2. Do queues handle multiple data types?
+
+> 3. What is an enqueue?
+
+> 4. What is a dequeue?
 
 ### Intermediate
 
-1. Write a class with a working queue in java, using the queue collection method.
+> 1.  Write a class with a working queue in java, using the queue collection method.
 
 ### Challenge
 
-1. Write a Queue class in java using the Array Implementation method.
-2. Write a Queue class in java using the LinkedList Implementation method.
-3. Write a Queue class in python that maintains constant time operations using a list.
+> 1.  Write a Queue class in java using the Array Implementation method.
+
+> 2.  Write a Queue class in java using the LinkedList Implementation method.
+
+> 3.  Write a Queue class in python that maintains constant time operations using a list.
 
 ## Sources
 

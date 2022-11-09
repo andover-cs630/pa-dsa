@@ -26,6 +26,7 @@ export const SIDEBAR: Sidebar = {
 	'Intro': [
 		{ text: 'Introduction', link: 'Markdown/introduction' },
 		{ text: 'Prerequisites', link: 'Markdown/prerequisites' },
+		{ text: 'Dynamic Programming', link: 'Markdown/dynamicprogramming' },
 		{ text: 'Pointers & Objects', link: 'Markdown/pointers-and-object-contents' },
 	],
 	'Elementary Structures': [

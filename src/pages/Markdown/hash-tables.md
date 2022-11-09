@@ -4,6 +4,10 @@ description: A comprehensive overview for the hash table data structure
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## Direct-Address Tables
 
 By now, we have learned a number of different elementary data structures, including `_`, `_`, and `____`. Each of these structures follows the format of a dictionary, a type of structure where data is called through a value called a key. Direct-address tables are a simplified type of this structure. In direct-address tables, the list of keys are non-negative integers that are not “too large”, and the data is stored in an array where the keys are the indices of the array. You can see this in the diagram below:
@@ -253,10 +257,6 @@ One of the drawbacks of linear probing is that you can have a big part of your a
 > **Helpful Video:** https://youtu.be/NHZL5439lK0
 
 ---
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 
 ## Exercises
 

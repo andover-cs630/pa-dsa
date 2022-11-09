@@ -4,6 +4,10 @@ description: rooted trees
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **Rooted Trees**
 
 A rooted tree is a tree that contains one node, or [object](/Markdown/pointers-and-object-contents "Pointers and Objects Article"), designated to be at the beginning, often referred to as the head or root of the tree. If you are unfamiliar with trees, they are a data structure in which objects are linked together by edges, which are often implemented as [pointers](/Markdown/pointers-and-object-contents "Pointers and Objects Article"). Each node of a tree thus contains a key, which represents that specific node’s data, as well as links, which point to connected nodes and form the tree’s edges. Links are traditionally either upwards or downwards on the tree.

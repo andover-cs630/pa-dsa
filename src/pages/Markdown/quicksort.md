@@ -4,6 +4,10 @@ description: An article explaining quicksort and implementations of it in java a
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 Quicksort works by partitioning an array based on an arbitrary element in the array, which we will refer to as $p.$ The array is divided into two subarrays, one which contains elements larger than $p$, and one which contains elements smaller than $p$. The operation is then repeated with each of the subarrays, with a new $p$ for each subarray, until the array is separated into sub-arrays with a designated length, usually 1.
 
 We can visualize this process with a tree-like structure as shown below in Figure S.1.
@@ -75,10 +79,13 @@ The only difference between Quicksort and Randomized Quicksort is how they deter
 
 > When would QuickSort take $O(n^2)$ time to sort?
 
-- When the array is completely random
-- When the array is already in sorted order
-- When the partition is always the highest or lowest value
-- When the array is too big
+> When the array is completely random
+
+> When the array is already in sorted order
+
+> When the partition is always the highest or lowest value
+
+> When the array is too big
 
 ## Sources
 

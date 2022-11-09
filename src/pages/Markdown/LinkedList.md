@@ -4,6 +4,10 @@ description: linked lists
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1: Linked List**
 
 Linked lists are a linear data structure. Each element of a linked list stores a piece of data and a [pointer](/Markdown/pointers-and-object-contents "Pointers and Objects Article") which links to the next node.
@@ -158,7 +162,9 @@ public LinkedListNode search(String target) {
 ```
 
 If uncomfortable with recursion, here is an iterative implementation:
+
 ### python
+
 ```python
 def search(self, target):
         cur = self
@@ -346,7 +352,7 @@ Video We Made to Help Explain Linked List:
 
 More linked list problems:
 
->https://practice.geeksforgeeks.org/explore?page=1&category[]=Linked%20List&sortBy=submissions
+> https://practice.geeksforgeeks.org/explore?page=1&category[]=Linked%20List&sortBy=submissions
 
 ---
 

@@ -4,6 +4,10 @@ description: "Comprehensive overview of Graphing Algorithms and Graphing Structu
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## S.2 - Elementary Algorithms
 
 Now that we have an idea of [what graphs are](/introduction-to-graphs) and [how to represent them](/introduction-to-graphs/#representation-of-graphs), we can get into a few graph algorithms.
@@ -289,20 +293,40 @@ To do this, Floyd-Warshall employs a similar method of iterating through possibl
 
 > **S.2.1.1** Propose a scenario that would not allow DFS to explore every node.
 
-- Consider the case where a branch extends forever, or at least one whose dimensions exceed system capabilities.
+<details>
+    <md-block>
+    - Consider the case where a branch extends forever, or at least one whose dimensions exceed system capabilities.
+    </md-block>
+<summary>Answer</summary>
+</details>
 
 > **S.4.1.1** Draw a new graph to demonstrate that DFS cannot find the shortest path on unweighted graphs. Explain why.
 
-- ![Exercise S.4.1.1](https://i.ibb.co/xX4WqKQ/chart4.png)
+<details>
+    <md-block>
+    ![Exercise S.4.1.1](https://i.ibb.co/xX4WqKQ/chart4.png)
 - DFS has no rules for which neighbors to visit first. In the above graph, this means that we might travel through 0 to 1, 2, and then 3, establishing this as our shortest path, without considering the path from 0 to 4 then 3. Attempts to rectify this would inevitably raise the runtime from O(N), meaning that BFS is optimal for this application.
+    </md-block>
+<summary>Answer</summary>
+</details>
 
 > **S.4.2.1** Negatively-weigthed cycles are mentioned very often—explain why Bellman-Ford would not work for graphs with negatively-weighted cycles.
 
-- In such graphs, the shortest path is found when the negatively-weighted cycle is traversed infinitely many times. Then, because the path contains infinitely many nodes, the idea behind Bellman-Ford (to relax each subpath) cannot hold.
+<details>
+    <md-block>
+    - In such graphs, the shortest path is found when the negatively-weighted cycle is traversed infinitely many times. Then, because the path contains infinitely many nodes, the idea behind Bellman-Ford (to relax each subpath) cannot hold.
+    </md-block>
+<summary>Answer</summary>
+</details>
 
 > **S.4.3.2** The code provided above is incomplete. What is one way we could check whether the graph contains a negative weight cycle?
 
-- Iterate once more. If the distances change, then a negative weight cycle is present.
+<details>
+    <md-block>
+    - Iterate once more. If the distances change, then a negative weight cycle is present.
+    </md-block>
+<summary>Answer</summary>
+</details>
 
 ---
 

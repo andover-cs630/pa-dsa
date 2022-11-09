@@ -4,13 +4,17 @@ description: An article on stacks, basic methods, and implementations with Array
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1 Stacks**
 
-Imagine you work at a busy, short-staffed restaurant. As you clean plates, you stack them up, and as food becomes available you retrieve the plates at the top and serve them at tables. You notice that the plates you just cleaned are the first to go out, since they were at the top of the stack. Meanwhile, the plate you first cleaned and started the stack with, was the last to go out. This, in effect, is a stack. 
+Imagine you work at a busy, short-staffed restaurant. As you clean plates, you stack them up, and as food becomes available you retrieve the plates at the top and serve them at tables. You notice that the plates you just cleaned are the first to go out, since they were at the top of the stack. Meanwhile, the plate you first cleaned and started the stack with, was the last to go out. This, in effect, is a stack.
 
 ![Stack of Dirty Dishes](https://www.alamy.com/stock-photo-stack-of-cleaned-dishes-in-a-restaurant-room-74083086.html)
 
-> A "stack" of dirty dishes, in which you can only put and take plates from the top of the pile, without making everything else fall. 
+> A "stack" of dirty dishes, in which you can only put and take plates from the top of the pile, without making everything else fall.
 
 A stack is a data structure which follows the Last-In-First-Out (LIFO) order of operations: the last plate to go in was the first to go out. Conversely, the first element to go in is the last to go out.
 
@@ -30,7 +34,7 @@ The basic operations to manipulate stacks are:
 
 Additionally, some programming languages like Java already have a Stack implementation with [API documentation for viewing](https://docs.oracle.com/javase/10/docs/api/java/util/Stack.html).
 
-Stacks are used in computer programs to store memory and execute/manage recursive calls. 
+Stacks are used in computer programs to store memory and execute/manage recursive calls.
 
 When coding with stacks, keep in mind that trying to access an empty stack will return a Stack Underflow exception. Conversely, attempting to add an element to a full stack will return a Stack Overflow exception. The Stack Overflow exception may be familiar to you because of infinite loops. The computer stores its memory in a stack, and when the stack has too many elements (resulting from an infinite loop), the stack overflows.
 
@@ -41,6 +45,7 @@ When coding with stacks, keep in mind that trying to access an empty stack will 
 The two main ways to implement stacks are through Arrays or Linked Lists.
 
 **Array Implementation**
+
 ```java
 // Stack implementation with Arrays
 // We will use a stack of integers for this example
@@ -205,19 +210,25 @@ public class StackLinkedList  { //Each part of a Linked List is a node which car
 ```
 
 **Video**
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pXKwjnyAL2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
 ## **S.3 Exercises**
 
->S.3.1 - Reverse the string “coding is fun!” using a stack (remember: you’ll have to implement the stack with strings!)
-{/* 
-**Answer:** floor(log2(n)) */}
+> S.3.1 - Reverse the string “coding is fun!” using a stack (remember: you’ll have to implement the stack with strings!)
+> {/\_
 
->S.3.2 - Sort an unordered stack using a recursive sort method.
+<details>
+    floor\((log2(n)\)
+<summary>Answer</summary>
+</details>
+
+> S.3.2 - Sort an unordered stack using a recursive sort method.
 
 ---
 
 ## **S.4 Sources**
+
 - https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/
