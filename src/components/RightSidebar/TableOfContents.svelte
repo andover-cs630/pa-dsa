@@ -32,6 +32,7 @@
         </a>
     </li>
     {#each headings as heading}
+        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <li class="heading-link depth-{heading.depth}"
             class:active={
                 (itemOffsets ?? []).at(
@@ -41,6 +42,7 @@
                         ).at(-1) ?? { id: '', topOffset: -1 }
                     ) + 1
                 )?.id === heading.slug}
+            tabindex=0
         >
             <a href="#{heading.slug}">
                 {heading.text}
@@ -58,7 +60,7 @@
         border-left: 4px solid var(--color-blue-dark);
         background-color: var(--color-blue-light);
     }
-    li:hover:not(.active) {
+    li:hover:not(.active), li:focus:not(.active) {
         border-left: 4px solid var(--color-blue-light);
         background-color: var(--color-blue-xlight);
     }
