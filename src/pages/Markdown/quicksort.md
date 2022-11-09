@@ -67,9 +67,6 @@ The best-case runtime will occur if the subarrays created are of size no greater
 
 The expected run-time for Quicksort is $O(n \log{n})$ with a randomized partition element. Randomized Partition creates a constant fraction of elements in each subarray so that the recursion tree has a depth of $\log{n}$. Each recursion takes $O(n)$ to go through each of the elements. Even if a few of the levels are split in the most uneven way, the runtime will remain $O(n \log{n})$. Furthermore, even if there is a split into a subarray of length $n-2$ and another of length $1$, another very uneven split, the runtime is still $O(n \log{n})$. Uneven splits slow down the algorithm with a slightly larger constant $c$ in the runtime which is hidden in the $O(n)$ notation. Thus, the expected runtime is $O(n \log{n})$.
 
-### Quicksort and Randomized Quicksort
-
-The only difference between Quicksort and Randomized Quicksort is how they determine the partitioned element. The bulk of the runtime of Quicksort is
 
 ---
 
