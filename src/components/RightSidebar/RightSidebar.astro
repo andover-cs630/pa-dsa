@@ -28,4 +28,10 @@ const { headings } = Astro.props as Props;
 		padding-top: var(--doc-padding);
 		overflow: auto;
 	}
+
+	@media only screen and (max-width: 1000px) {
+   		.sidebar-nav {
+      		display: none;
+    	}
+  }
 </style>
