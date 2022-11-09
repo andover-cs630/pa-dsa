@@ -10,7 +10,7 @@ layout: "@main"
 
 ## Direct-Address Tables
 
-By now, we have learned a number of different elementary data structures, including `_`, `_`, and `____`. Each of these structures follows the format of a dictionary, a type of structure where data is called through a value called a key. Direct-address tables are a simplified type of this structure. In direct-address tables, the list of keys are non-negative integers that are not “too large”, and the data is stored in an array where the keys are the indices of the array. You can see this in the diagram below:
+By now, we have learned a number of different elementary data structures, including [pointers and objects](/Markdown/pointers-and-object-contents), [graphs](/introduction-to-graphs), [linked lists](/Markdown/LinkedList), and [queues](/Markdown/queues), and [stacks](/Markdown/stacks). Each of these structures follows the format of a dictionary, a type of structure where data is called through a value called a key. Direct-address tables are a simplified type of this structure. In direct-address tables, the list of keys are non-negative integers that are not “too large”, and the data is stored in an array where the keys are the indices of the array. You can see this in the diagram below:
 
 ![Chart 1](https://i.ibb.co/k5Sm8s5/table1.png)
 
@@ -69,11 +69,11 @@ This turns us to hash tables, a more efficient version of direct-address tables.
 
 > **Figure 11.2** — Using a hash function $h$ to map keys hash-table slots. Because keys $k_2$ and $k_5$ map to the same slot, they collide.
 
-However, as you can see from the figure above, this creates a new issue: sometimes two keys hash to the same slot. This is called a **collision**. In order to deal with this, we use a process called **chaining**, which involves placing all elements that hash to the same slot in a [linked list](https://pa-dsa.vercel.app/LinkedList "Linked List Blog Post"), and putting a pointer to the head of that list in the slot. You can see this shown in the figure below:
+However, as you can see from the figure above, this creates a new issue: sometimes two keys hash to the same slot. This is called a **collision**. In order to deal with this, we use a process called **chaining**, which involves placing all elements that hash to the same slot in a [linked list](/Markdown/LinkedList), and putting a pointer to the head of that list in the slot. You can see this shown in the figure below:
 
 ![Hash Table Chart2](https://i.ibb.co/nQ2fNGb/table3.png)
 
-> **Figure 11.3:** — Collision resolution by chaining. Each hash-table slot `T[j]` contains a linked list of all the keys whose hash value is $j$. For example, $h(k_1) = h(k_4)$, and $h(k_5) = h(k_7) = h(k_2)$. The linked list can be either singly or doubly linked; we show it as doubly linked because deletion is faster that way.
+> **Figure 11.3:** — Collision resolution by chaining. Each hash-table slot `T[j]` contains a linked list of all the keys whose hash value is $j$. For example, $h(k_1) = h(k_4)$, and $h(k_5) = h(k_7) = h(k_2)$. The linked list can be either [singly](/Markdown/LinkedList#s1-linked) or [doubly](/Markdown/LinkedList#s2-doubly-linked-lists-and-algorithms) linked; we show it as doubly linked because deletion is faster that way.
 
 Of course, this introduces new issues. Primarily, it complicates the insert, delete, and sort functions.
 

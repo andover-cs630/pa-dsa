@@ -1,6 +1,5 @@
 ---
 import Logo from "./Logo.astro";
-import { Icon } from 'astro-icon';
 import Dropdown from "./Dropdown.astro";
 ---
 
@@ -14,7 +13,7 @@ import Dropdown from "./Dropdown.astro";
 		</div>
 		<div class="navigation">
 			<div class="dropdowns">
-				<div class="lesson-dropdown">
+				<div class="lesson-dropdown" tabindex="0">
 					<div class="lessons">
 						<h1>Lessons</h1>
 					</div>
@@ -27,9 +26,6 @@ import Dropdown from "./Dropdown.astro";
 						<h1>About</h1>
 					</div>
 				</a>
-			</div>
-			<div class="menu">
-				<Icon name="ph:dots-three-bold" />
 			</div>
 		</div>
 	</nav>
@@ -98,19 +94,15 @@ import Dropdown from "./Dropdown.astro";
 	}
 
 	.lessons:hover,
-	.about:hover {
+	.about:hover, .lessons:focus, .about:focus {
 		background: #005D8F;
-	}
-
-	.lessons {
-		/* background-color: purple; */
 	}
 
 	.dropdown {
 		display: none;
 	}
 
-	.lesson-dropdown:hover > .dropdown {
+	.lesson-dropdown:hover > .dropdown, .lesson-dropdown:focus > .dropdown {
 		display: block;
 		animation-name: fade;	
 		animation-duration: 1ms;
@@ -130,46 +122,5 @@ import Dropdown from "./Dropdown.astro";
 		font-weight: 600;
 		font-size: 1.25rem;
 		margin: 0;
-	}
-
-	.menu {
-		grid-row: 1;
-		grid-column: 1;
-		visibility: hidden;
-		height: 4rem;
-		display: flex;
-		align-items: center;
-		padding-inline: 1rem;
-	}
-
-	.menu:hover {
-		background: #005D8F;
-	}
-
-	
-	.icon {
-		grid-column: 1;
-		grid-row: 1;
-		margin-left: auto;
-		padding-right: 0.5rem;
-	}
-
-	@media only screen and (max-width: 1200px) {
-        .dropdowns {
-            display: none;
-        }
-		.menu {
-			visibility: visible;
-		}
-    }
-
-	[astro-icon="ph:magnifying-glass-fill"] {
-		color: white;
-		height: 2rem;
-	}
-
-	[astro-icon="ph:dots-three-bold"] {
-		color: white;
-		height: 3rem;
 	}
 </style>

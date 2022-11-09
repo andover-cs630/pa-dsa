@@ -12,7 +12,7 @@ layout: "@main"
 
 Imagine you work at a busy, short-staffed restaurant. As you clean plates, you stack them up, and as food becomes available you retrieve the plates at the top and serve them at tables. You notice that the plates you just cleaned are the first to go out, since they were at the top of the stack. Meanwhile, the plate you first cleaned and started the stack with, was the last to go out. This, in effect, is a stack.
 
-![Stack of Dirty Dishes](https://www.alamy.com/stock-photo-stack-of-cleaned-dishes-in-a-restaurant-room-74083086.html)
+![Stack of Dirty Dishes](https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/px1234972-image-kwvy2iy0.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=6c5e6b0b2e13a73229bfdc51a5775e87)
 
 > A "stack" of dirty dishes, in which you can only put and take plates from the top of the pile, without making everything else fall.
 

@@ -1,52 +1,55 @@
 ---
-title: Data Structures and Algorithms
-description: Landing Page
+title: Introduction
+description: Introduction Page
 layout: "@main"
 ---
 
-Welcome to the [Phillips Academy](https://www.andover.edu/) Data Structures and Algorithms textbook! This textbook was written by Dr. Nick Zufelt's CSC630 class at Andover. Enjoy!
+In the fall of 2022, the students in Nick Zufelt’s CSC630 course, *Data Structures and Algorithms*, constructed this online resource. We hope that our site’s posts, videos, code examples, exercises, and summaries help students and industry professionals alike in learning — or re-learning — the content of this core computer science topic.
 
-### Thorough, Well-Researched, In-Depth Lessons
+We made this for you, and we hope you love it! Feel free to share any feedback to [Nick](mailto:nzufelt@andover.edu).
 
-Some really good description about the work we have put into this project
+### Where to start
 
-### Examples in java & python
+If you’re a student who has just completed an AP Computer Science A class, or you need a refresher on the basics, take a look at our [Foundations](/Markdown/prerequisites) page.
 
-#### Various Learning Styles
+Check out an [example page](/introduction-to-graphs) to see what this site offers.
 
-## What's on the website
+Or, dive into our first article, [pointers & objects](/Markdown/pointers-and-object-contents).
 
-The website is our take on Data Structures and Algorithms. We've designed it to be accessible to anyone, whether you've just completed an AP Computer Science course or are an industry professional looking to brush up on some skills. To start, we've included a [Prerequisites](/Markdown/prerequisites "Prerequisites article") page with background information to bring you up to speed in case your coding has become a bit rusty (it happens to all of us). Next, the website is divided into different modules, each with an individual data structure or algorithm. Each page has been carefully peer reviewed by students. There, you'll find an explanation of the data structure, an implementation, as well as practice questions and applications. Give us feedback at nzufelt@andover.edu.
+### What is CSC630?
 
-## Who we are
+The computer science curriculum at Andover terminates in a rotating topic course, CSC630, *Honors Computer Science Seminar*. Students in this course take on challenging problems with real-life implications. The topics change each term and in the past have included Data Visualization, Machine Learning, High-Performance Computing, Full Stack App Development, the Open-Source Movement, and obviously Data Structures and Algorithms, among many others.
 
-As a class, we worked in several different teams to compile this textbook for you. Below are the names of the students responsible for bringing this knowledge to you:
+### Who are we?
 
-- Sebastian Altomare
-- Abigail Andam
-- Charlie Benjamin
-- Glen Cahilly
-- Kyle Chen
-- Patrick Chen
-- Amanda Chiang
-- Ellie Cho
-- Nishani Clarke
-- Benjamin Forman
-- Davin Jeong
-- Brian Masse
-- Megha Narayanan
-- Sarah Pan
-- Yashraj Patel
-- Edouard Perrault
-- Kaeley Pierre
-- Julian Reed
-- Daniel Rekoske
-- Alexander Shieh
-- Robert Shin
-- Venkat Sundaram
-- Marc Vidal
-- Claire Wang
-- Andrew Wen
-- Ethan Wong
-- Andrew Yu
-- Daniel Zou
+We are students from Phillips Academy in Andover, Massachusetts, USA. 
+
+* Sebastian Altomare
+* Abigail Andam
+* Charlie Benjamin
+* Glen Cahilly
+* Kyle Chen
+* Patrick Chen
+* Amanda Chiang
+* Ellie Cho
+* Nishani Clarke
+* Benjamin Forman
+* Davin Jeong
+* Brian Masse
+* Megha Narayanan
+* Sarah Pan
+* Yashraj Patel
+* Edouard Perrault [github](https://github.com/Edouard87)
+* Kaeley Pierre
+* Julian Reed
+* Daniel Rekoske
+* Alexander Shieh
+* Robert Shin
+* Venkat Sundaram
+* Marc Vidal
+* Claire Wang
+* Andrew Wen
+* Ethan Wong
+* Andrew Yu
+* Daniel Zou
+* Our teacher, Nick Zufelt [github](https://github.com/nzufelt)
