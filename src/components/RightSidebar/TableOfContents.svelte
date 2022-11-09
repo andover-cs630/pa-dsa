@@ -11,7 +11,7 @@
 
     let scrollY: number;
     let titles: NodeListOf<Element>;
-    let itemOffsets: ItemOffset[];
+    let itemOffsets: ItemOffset[] = [];
 
     onMount(() => {
         titles = document.querySelectorAll('article :is(h1, h2, h3, h4, h5, h6)');
@@ -35,13 +35,14 @@
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <li class="heading-link depth-{heading.depth}"
             class:active={
-                (itemOffsets ?? []).at(
-                    (itemOffsets ?? []).lastIndexOf(
-                        (itemOffsets ?? []).filter(
+                itemOffsets.at(
+                    itemOffsets.lastIndexOf(
+                        itemOffsets.filter(
                             (entry) => entry.topOffset <= scrollY
                         ).at(-1) ?? { id: '', topOffset: -1 }
                     ) + 1
-                )?.id === heading.slug}
+                )?.id === heading.slug
+            }
             tabindex=0
         >
             <a href="#{heading.slug}">
