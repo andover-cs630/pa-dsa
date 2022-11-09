@@ -6,7 +6,7 @@ layout: "@main"
 
 ## Direct-Address Tables
 
-By now, we have learned a number of different elementary data structures, including [pointers & objects](/Markdown/pointers-and-object-contents "pointers and objects article"), [graphs](/introduction-to-graphs/ "introduction to graphs article"), [linked lists](/Markdown/LinkedList "linked lists article"), and [queues](/Markdown/queues "queues article"). Each of these structures follows the format of a dictionary, a type of structure where data is called through a value called a key. Direct-address tables are a simplified type of this structure. In direct-address tables, the list of keys are non-negative integers that are not “too large”, and the data is stored in an array where the keys are the indices of the array. You can see this in the diagram below:
+By now, we have learned a number of different elementary data structures, including `_`, `_`, and `____`. Each of these structures follows the format of a dictionary, a type of structure where data is called through a value called a key. Direct-address tables are a simplified type of this structure. In direct-address tables, the list of keys are non-negative integers that are not “too large”, and the data is stored in an array where the keys are the indices of the array. You can see this in the diagram below:
 
 ![Chart 1](https://i.ibb.co/k5Sm8s5/table1.png)
 
@@ -65,11 +65,11 @@ This turns us to hash tables, a more efficient version of direct-address tables.
 
 > **Figure 11.2** — Using a hash function $h$ to map keys hash-table slots. Because keys $k_2$ and $k_5$ map to the same slot, they collide.
 
-However, as you can see from the figure above, this creates a new issue: sometimes two keys hash to the same slot. This is called a **collision**. In order to deal with this, we use a process called **chaining**, which involves placing all elements that hash to the same slot in a [linked list](/Markdown/LinkedList "Linked List Article"), and putting a pointer to the head of that list in the slot. You can see this shown in the figure below:
+However, as you can see from the figure above, this creates a new issue: sometimes two keys hash to the same slot. This is called a **collision**. In order to deal with this, we use a process called **chaining**, which involves placing all elements that hash to the same slot in a [linked list](https://pa-dsa.vercel.app/LinkedList "Linked List Blog Post"), and putting a pointer to the head of that list in the slot. You can see this shown in the figure below:
 
 ![Hash Table Chart2](https://i.ibb.co/nQ2fNGb/table3.png)
 
-> **Figure 11.3:** — Collision resolution by chaining. Each hash-table slot `T[j]` contains a linked list of all the keys whose hash value is $j$. For example, $h(k_1) = h(k_4)$, and $h(k_5) = h(k_7) = h(k_2)$. The linked list can be either [singly](/Markdown/LinkedList#s1-linked-list "Singly Linked List Article") or [doubly linked](/Markdown/LinkedList#s2-doubly-linked-lists-and-algorithms "Doubly Linked List Section of Linked List Article"); we show it as doubly linked because deletion is faster that way.
+> **Figure 11.3:** — Collision resolution by chaining. Each hash-table slot `T[j]` contains a linked list of all the keys whose hash value is $j$. For example, $h(k_1) = h(k_4)$, and $h(k_5) = h(k_7) = h(k_2)$. The linked list can be either singly or doubly linked; we show it as doubly linked because deletion is faster that way.
 
 Of course, this introduces new issues. Primarily, it complicates the insert, delete, and sort functions.
 
@@ -254,39 +254,47 @@ One of the drawbacks of linear probing is that you can have a big part of your a
 
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## Exercises
 
 > 1. Why do we use a doubly linked list for chaining? Keep in mind the three algorithms we are optimizing for.
 
 <details>
-    - A doubly linked list makes deletion simpler, as we know from the linked lists lesson.   
+    A doubly linked list makes deletion simpler, as we know from the linked lists lesson.   
+<summary>Answer</summary>
 </details>
 
 > 2. Write in pseudocode the search algorithm for a chained hash table.
 
 <details>
-    - Locate `T[h(k0]`, which is a linked list
-    - Search the linked list for a value with the key $k$   
+    Locate \(T[h(k0]\), which is a linked list
+    Search the linked list for a value with the key \(k\)
+<summary>Answer</summary>
 </details>
 
 > 3. Under the assumption of simple uniform hashing, what is the average run time of the search algorithm if it doesn’t find the element? Don't forget about the time to run the hash function!
 
 <details>
+\(O(1+\propto)\). A key \(k\) will have an equal chance of being in any of the \(m\) slots, so the runtime is proportional to the time to traverse the list \(T[h(k)]\), which will have expected length \(\propto)\). Thus, the time complexity is \(O(\propto)\). Combined with the \(O(1)\) time to compute the hash function, we get \(O(1+\propto)\).
 <summary>Answer</summary>
-    - $O(1+\propto)$. A key $k$ will have an equal chance of being in any of the $m$ slots, so the runtime is proportional to the time to traverse the list `T[h(k)]`, which will have expected length $\propto$. Thus, the time complexity is $O(\propto)$. Combined with the $O(1)$ time to compute the hash function, we get $O(1+\propto)$. 
 </details>
 
-> 2. What about the average run time if it does?
+> 4. What about the average run time if it does?
 
 <details>
-    - $O(1+\propto)$ (see book for further explanation as to why and a proof on page 259) 
-    - We conclude that the average run time in each of these cases is $O(1+\propto)$. This means that if the number of hash table slots $m$ is at least proportional to the number of elements $n$, meaning $n=O(m)$, then the time complexity of the search is constant, $O(1)$.
+    \(O(1+\propto)\) (see book for further explanation as to why and a proof on page 259) 
+    We conclude that the average run time in each of these cases is \(O(1+\propto)\). This means that if the number of hash table slots \(m\) is at least proportional to the number of elements \(n\), meaning \(n=O(m)\), then the time complexity of the search is constant, \(O(1)\).
+<summary>Answer</summary>
 </details>
 
-> 3. Consider a hash table of size $m= 100$ and a corresponding hash function $h(k) \equiv k \pmod{m}$. Where would the keys 5928, 1001, and 154 be mapped?
+> 5. Consider a hash table of size $m= 100$ and a corresponding hash function $h(k) \equiv k \pmod{m}$. Where would the keys 5928, 1001, and 154 be mapped?
 
 <details>
-    - 28, 1, and 54
+    28, 1, and 54
+<summary>Answer</summary>
 </details>
 
 ---
