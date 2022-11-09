@@ -52,12 +52,13 @@
 <style>
     li {
         border-left: 4px solid transparent;
+        padding-right: 2em;
     }
     .active {
         border-left: 4px solid var(--color-blue-dark);
         background-color: var(--color-blue-light);
     }
-    li:hover {
+    li:hover:not(.active) {
         border-left: 4px solid var(--color-blue-light);
         background-color: var(--color-blue-xlight);
     }
