@@ -33,7 +33,15 @@
     </li>
     {#each headings as heading}
         <li class="heading-link depth-{heading.depth}"
-            class:active={(itemOffsets ?? []).filter((entry) => entry.topOffset <= scrollY).at(-1)?.id === heading.slug}>
+            class:active={
+                (itemOffsets ?? []).at(
+                    (itemOffsets ?? []).lastIndexOf(
+                        (itemOffsets ?? []).filter(
+                            (entry) => entry.topOffset <= scrollY
+                        ).at(-1) ?? { id: '', topOffset: -1 }
+                    ) + 1
+                )?.id === heading.slug}
+        >
             <a href="#{heading.slug}">
                 {heading.text}
             </a>
