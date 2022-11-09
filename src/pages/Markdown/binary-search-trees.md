@@ -276,7 +276,6 @@ Voilà! We are finished with deletion!
     ```    
 </details>
 
-
 ### Challenge Questions
 
 1. Is the operation of deletion “commutative” in the sense that deleting x and then y from a binary search tree leaves the same tree as deleting y and then x? Argue why it is or give a counterexample. Drawing a binary search tree may help in this case.

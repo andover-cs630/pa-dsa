@@ -119,9 +119,15 @@ const currentPageMatch = currentPage.endsWith("/")
     font-weight: 600;
   }
 
-  @media (min-width: 50em) {
+  @media (max-width: 50%) {
     .nav-groups {
       padding: 0;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .nav-groups {
+      display: none;
     }
   }
 </style>
