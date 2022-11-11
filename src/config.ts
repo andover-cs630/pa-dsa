@@ -32,7 +32,7 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Introduction to Graphs', link: '	introduction-to-graphs/' },
 		{ text: 'Linked List', link: 'Markdown/LinkedList' },
 		{ text: 'Queues', link: 'Markdown/queues' },
-		{ text: 'Rooted Trees', link: 'Markdown/rooted-trees' },
+		{ text: 'Trees', link: 'Markdown/rooted-trees' },
 		{ text: 'Stacks', link: 'Markdown/stacks' },
 	],
 
