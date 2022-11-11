@@ -211,7 +211,7 @@ public class StackLinkedList  { //Each part of a Linked List is a node which car
 
 **Video**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pXKwjnyAL2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1038" height="577" src="https://www.youtube.com/embed/1BtVf7nSdxU" title="Stacks Array Implementation with Generics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
