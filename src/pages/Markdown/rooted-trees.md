@@ -269,7 +269,11 @@ Now, we test our implementation using a Main method. We test using a fake treeNo
 
 ### Sources
 > **Introduction to Algorithms, 3rd edition** https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf
+
 > https://www.codesdope.com/blog/article/trees-in-computer-science/ 
+
 > https://isaaccomputerscience.org/concepts/dsa_datastruct_tree?examBoard=all&stage=all
+
 > https://www.baeldung.com/java-binary-tree
+
 > http://www.btechsmartclass.com/data_structures/tree-terminology.html 
