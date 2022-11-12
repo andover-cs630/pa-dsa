@@ -57,7 +57,7 @@ const currentPage = Astro.url.pathname;
 			}
 
 			#grid-left {
-				position: fixed;
+				/* position: fixed; */
 				background-color: var(--theme-bg);
 				display: flex;
 			}
@@ -68,7 +68,6 @@ const currentPage = Astro.url.pathname;
 				display: flex;
 				flex-direction: column;
 				height: 100%;
-				/* width: 60vw; */
 			}
 
 			#grid-right {
@@ -92,7 +91,6 @@ const currentPage = Astro.url.pathname;
 
 			@media (min-width: 50em) {
 				.layout {
-					/* grid-template-columns: 16rem 60vw 16rem; */
 					grid-template-columns: 25% 50% 21%;
 					padding-left: 0;
 					padding-right: 0;
@@ -103,6 +101,15 @@ const currentPage = Astro.url.pathname;
 					grid-column: 3;
 					position: sticky;
 					display: flex;
+				}
+			}
+
+			@media only screen and (max-width: 100px) {
+				.grid-sidebar {
+					display: none;
+				}
+				#grid-left, #grid-right {
+					display: none;
 				}
 			}
 		</style>
