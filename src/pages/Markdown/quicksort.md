@@ -4,6 +4,10 @@ description: An article explaining quicksort and implementations of it in java a
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 Quicksort works by partitioning an array based on an arbitrary element in the array, which we will refer to as $p.$ The array is divided into two subarrays, one which contains elements larger than $p$, and one which contains elements smaller than $p$. The operation is then repeated with each of the subarrays, with a new $p$ for each subarray, until the array is separated into sub-arrays with a designated length, usually 1.
 
 We can visualize this process with a tree-like structure as shown below in Figure S.1.
@@ -63,9 +67,6 @@ The best-case runtime will occur if the subarrays created are of size no greater
 
 The expected run-time for Quicksort is $O(n \log{n})$ with a randomized partition element. Randomized Partition creates a constant fraction of elements in each subarray so that the recursion tree has a depth of $\log{n}$. Each recursion takes $O(n)$ to go through each of the elements. Even if a few of the levels are split in the most uneven way, the runtime will remain $O(n \log{n})$. Furthermore, even if there is a split into a subarray of length $n-2$ and another of length $1$, another very uneven split, the runtime is still $O(n \log{n})$. Uneven splits slow down the algorithm with a slightly larger constant $c$ in the runtime which is hidden in the $O(n)$ notation. Thus, the expected runtime is $O(n \log{n})$.
 
-### Quicksort and Randomized Quicksort
-
-The only difference between Quicksort and Randomized Quicksort is how they determine the partitioned element. The bulk of the runtime of Quicksort is
 
 ---
 
@@ -75,10 +76,13 @@ The only difference between Quicksort and Randomized Quicksort is how they deter
 
 > When would QuickSort take $O(n^2)$ time to sort?
 
-- When the array is completely random
-- When the array is already in sorted order
-- When the partition is always the highest or lowest value
-- When the array is too big
+> When the array is completely random
+
+> When the array is already in sorted order
+
+> When the partition is always the highest or lowest value
+
+> When the array is too big
 
 ## Sources
 

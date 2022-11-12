@@ -4,6 +4,10 @@ description: A comprehensive overview for the Binary Tree data structure
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1 Introduction - what is a binary search tree**
 
 A Binary Search Tree (BST) is a binary [tree](/Markdown/rooted-trees "Rooted Trees Article") with a set of extra properties.
@@ -238,29 +242,35 @@ Voilà! We are finished with deletion!
 
 > 1. Given how the current insertion method is implemented for the Binary Search Tree, do you see any future issues in terms of maintaining a log(n) runtime when searching the BST?
 
-- The insertion method does not make any attempt to “balance” the BST. To help visualize this, imagine this code:
+<details>
+<summary>Answer</summary>
+    <md-block>
+        - The insertion method does not make any attempt to “balance” the BST. To help visualize this, imagine this code:
 
-  ```py
-  BST = Node(5)
-  BST.insert(Node(4))
-  BST.insert(Node(3))
-  BST.insert(Node(2))
-  BST.insert(Node(1))
-  ```
+```py
+BST = Node(5)
+BST.insert(Node(4))
+BST.insert(Node(3))
+BST.insert(Node(2))
+BST.insert(Node(1))
+```
 
-  Which would produce this BST:
+Which would produce this BST:
 
-  ![Solution 1.1](https://i.ibb.co/dgQd3PP/chart7.png)
+![Solution 1.1](https://i.ibb.co/dgQd3PP/chart7.png)
 
-  Does this remind you of a [linked list?](/Markdown/LinkedList "Linked List Article") If the user calls BST.search(1), the runtime will be $O(n)$ since the height of the BST = n. In order to balance the tree, one would have to recreate the insert method to balance the tree after each insertion. For more info, check out [Red-Black Trees](/Markdown/RedBlackTrees "Red-Black Trees Article").
+Does this remind you of a [linked list?](/Markdown/LinkedList "Linked List Article") If the user calls BST.search(1), the runtime will be $O(n)$ since the height of the BST = n. In order to balance the tree, one would have to recreate the insert method to balance the tree after each insertion. For more info, check out [Red-Black Trees](/Markdown/RedBlackTrees "Red-Black Trees Article").
+</md-block>
+
+</details>
 
 > 2. Given a sorted array l, convert l into a Binary Search Tree. For a secondary challenge, convert l into a height-balanced BST. This means that the height difference between each node’s left and right subtrees is never greater than one.
 
 ![Question 2](https://i.ibb.co/Q6zMCwV/chart8.png)
 
-- Here is a possible solution in python:
-
 <details>
+    <md-block>
+    - Here is a possible solution in python:
     ```py
     def sorted_array_to_BST(l):
         if l is None:
@@ -274,6 +284,8 @@ Voilà! We are finished with deletion!
         return_node.right = sorted_array_to_BST(l[mid+1:])
         return return_node
     ```    
+    </md-block>
+<summary>Answer</summary>
 </details>
 
 ### Challenge Questions

@@ -4,9 +4,16 @@ description: Prerequisites page
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **Prerequisites**
+
 ### Algorithms:
+
 #### Bubble Sort:
+
 The bubble sort is known as the ‘classic’ method of sorting when it comes to arrays. It is often the first method of sorting that is introduced because of its ease to understand conceptually. When you imagine sorting an array, you might imagine putting the largest element at the end, smallest element at the front, or comparing the element to the one next to it to see which belongs at which end (greater or smaller). The latter method is the same idea behind the bubble sort.
 
 Let’s look at the example of what the Bubble Sort does below. Note that the example below briefly addresses the first few steps involved in the Bubble Sort.
@@ -26,7 +33,6 @@ Let’s look into this with a smaller array.
 Here, you see the full bubble sort. For each iteration, we look at the element at the front (index 0) and compare it to the element next to it until we approach the area of the array that is already sorted. Notice that after the first iteration, the greatest element is at the end of the array, and after the second iteration, the two greatest elements are at the end in sorted order. Once we reach that point of the array, no more comparisons should be made (for efficiency, since that area is already sorted). Then, we can stop the iteration, return to the front of the array, and do it over again.
 
 To demonstrate how this sort algorithm looks in Java, the bubbleSort method is below:
-
 
 ```java
     public static void bubbleSort(int[] list)
@@ -54,6 +60,6 @@ Then, our outer for-loop value of $i$ will increment, and we will do the compari
 
 Recall that the end of our list is sorted because at the end of the first pass, the greatest value is at the end of the array. The same applies for each pass after that. The next greatest element will be at the end of the array. This means we can stop each subsequent pass once we get to the part of the array that is already sorted, hence the $p < list.length - i$ rather than $p < list.length$.
 
-***Exercise***: Use the bubble sort idea above to sort an array: $[5, 10, 2, 9, 7]$. Go through each pass and determine the final sorted array. What do you notice? Do you notice any alternative ways to sort this data?
+**_Exercise_**: Use the bubble sort idea above to sort an array: $[5, 10, 2, 9, 7]$. Go through each pass and determine the final sorted array. What do you notice? Do you notice any alternative ways to sort this data?
 
-*Solution*: Trace the code and you’ll notice a similar drawing/trace to the one above. You’ll likely have to go through 4 passes using the traditional bubble sort method. The next part of the question asks if you notice alternative ways to sort the data, and you probably thought of many. As you’ll see further on, there are many different algorithms to sort an array. There’s insertion sort (next section), selection sort, merge sort, quick sore, etc. Many of these algorithms vary in time-complexity, which you’ll read more on later in this section. For now, think of all the possibilities with different sorting algorithms.
+_Solution_: Trace the code and you’ll notice a similar drawing/trace to the one above. You’ll likely have to go through 4 passes using the traditional bubble sort method. The next part of the question asks if you notice alternative ways to sort the data, and you probably thought of many. As you’ll see further on, there are many different algorithms to sort an array. There’s insertion sort (next section), selection sort, merge sort, quick sore, etc. Many of these algorithms vary in time-complexity, which you’ll read more on later in this section. For now, think of all the possibilities with different sorting algorithms.

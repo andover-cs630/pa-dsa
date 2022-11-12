@@ -4,6 +4,10 @@ description: Implementing and representing pointers and objects through the use 
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1: Pointers and Objects**
 
 Pointers play a significant role in the internal processing of many languages by storing the addresses of objects directly in the computer’s memory. In java, for example, when a variable type stores a reference to an object, the pointer holds the address of the object. Though in many languages like java or python, we need not worry about pointers and objects as the computer automatically follows the pointers stored in reference variables to find the object in memory. However, in lower-level programming languages that do not automate the process, such as C++, we can implement various linked data structures without pointer data types to handle tasks that normally require pointers.

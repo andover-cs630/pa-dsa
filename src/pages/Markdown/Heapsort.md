@@ -4,6 +4,10 @@ description: heapsort
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1 Binary Trees**
 
 The foundations of heapsort lie in a [rooted binary tree](/Markdown/rooted-trees). As a refresher, a rooted binary tree has a singular, topmost node and two “children” nodes stemming from each “parent” node. Each node represents one element of the array. Even though we visualize this data structure differently than we do an array, they are easily translated into the other. The indices correspond to locations in the heap as shown below, with the first element in the array being the topmost node and indices increasing left-to-right in each level from top-to-bottom.
@@ -45,6 +49,7 @@ public static void heapify(int arr[], int n, int i){
 ## **S.3 Building a Heap**
 
 This algorithm can be used to transform an array into a heap. To do this, we start at the non-leaf node with the greatest index. We can mathematically show that this node has index floor(A.length / 2) - 1. We ensure that the sub-tree with this node as a root is a max-heap using the heapify algorithm. After this, the index is decreased and the process repeats for each node.
+
 ### java
 
 ```java
@@ -63,6 +68,7 @@ int n=arr.length-1;
 ## **S.4 The Heapsort Algorithm**
 
 Once the heap is constructed, the heapsort algorithm begins. The root of the heap is exchanged with the last element in the heap, and the size of the heap is reduced by one. This essentially removes sorted elements from the heap, splitting the array into sorted and unsorted sections. The heapifying procedure is repeated with all the elements that remain in the heap, the root is swapped with the last element in the heap, and this process continues until the heap has size 0. Heapsort has a number of advantages over other algorithms. First, it sorts in place, meaning it doesn’t require more memory to be allocated. Second, although it is, on average, slower than other algorithms like quicksort, its worst-case runtime is faster because it has a time complexity of $O(n\log(n))$.
+
 ### java
 
 ```java
@@ -80,11 +86,17 @@ int n=arr.length-1;
 
 > S.1.1 - What is the maximum height of a node in a heap with $n$ elements, in terms of $n$?
 
-**Answer:** floor$(\log_2(n))$
+<details>
+    floor\((\log_2(n))\)
+<summary>Answer</summary>
+</details>
 
 > S.1.2 - What are the minimum and maximum numbers of elements in a heap with height _n_?
 
-**Answer:** min: $2^n,$ max: $2^{n+1} - 1$
+<details>
+    min: \(2^n,\) max: \(2^{n+1} - 1\)
+<summary>Answer</summary>
+</details>
 
 > S.1.3 - What are the indices of the children of a node with index $n$?
 > Answer: $2n$, $2n+1$
@@ -96,7 +108,10 @@ int n=arr.length-1;
 
 > S.4.1 - Show that the time complexity of heapsort is $O(n\log(n)).$
 
-**Answer:** We can divide the heapify to two tasks: “visiting” indexes floor(1/2n) - 1, floor(1/2n) - 2, …, 0 and all the recursion that goes on during each visit. The first part has time complexity O(n) (we ignore constants and coefficients) and the second has time complexity $O(\log(n))$. Putting the two together, we find that the time complexity for heapsort is $O(n\log(n))$.
+<details>
+    We can divide the heapify to two tasks: “visiting” indexes floor\((1/2n) - 1\), floor\((1/2n) - 2, …, 0\) and all the recursion that goes on during each visit. The first part has time complexity O(n) (we ignore constants and coefficients) and the second has time complexity \(O(\log(n))\). Putting the two together, we find that the time complexity for heapsort is \(O(n\log(n))\).
+<summary>Answer</summary>
+</details>
 
 ---
 
@@ -107,6 +122,7 @@ Visualization of Heapsort:
 > https://www.cs.usfca.edu/~galles/visualization/HeapSort.html
 
 Runnable Heapsort Example:
+
 ### java
 
 ```java

@@ -4,6 +4,10 @@ description: An article on properties, rotations,
 layout: "@main"
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 ## **S.1: Properties of Red-Black Trees**
 
 ![Red-Black Trees 1](https://i.ibb.co/tHLjBfh/Red-Black-Trees.png) <br />
@@ -451,24 +455,47 @@ def getinorderSuccessor(self, node):
 
 ## **Exercises**
 
-Exercises:
-S.1.1 - Can you have a tree of all black nodes?<br />
-Answer: Yes
+> S.1.1 - Can you have a tree of all black nodes?<br />
 
-S.1.2 - What is the length of the simple path of the above tree? <br />
-Answer: 4 (Remember that the null node, not pictured, counts for the path length)
+<details>
+    Yes
+<summary>Answer</summary>
+</details>
 
-S.2.1 - What is the runtime of left and right rotate? <br />
-Answer: Constant time O(1)
+> S.1.2 - What is the length of the simple path of the above tree? <br />
 
-S.2.2 - In right rotation, can the pivot be null? <br />
-Answer: No, because that would result in the root of the subtree being null with non-null nodes after.
+<details>
+    4 (Remember that the null node, not pictured, counts for the path length)
+<summary>Answer</summary>
+</details>
 
-S.3.1 - Does Red-Black insertion incorporate BST insertion? <br />
-Answer: Yes. BST insertion is the first step before the tree is repainted.
+> S.2.1 - What is the runtime of left and right rotate? <br />
 
-S.3.2 - Is insertion have a longer run time in RB Trees than in BST? <br />
-Answer: Depends on the tree. BST insertion depends on height, and RB insertion depends on the log of total entries, so if the log of total entries of a tree is lower than the height, run time of insertion for a RB Tree will be faster.
+<details>
+    Constant time O(1)
+<summary>Answer</summary>
+</details>
+
+> S.2.2 - In right rotation, can the pivot be null? <br />
+
+<details>
+     No, because that would result in the root of the subtree being null with non-null nodes after.
+<summary>Answer</summary>
+</details>
+
+> S.3.1 - Does Red-Black insertion incorporate BST insertion? <br />
+
+<details>
+     Yes. BST insertion is the first step before the tree is repainted.
+<summary>Answer</summary>
+</details>
+
+> S.3.2 - Is insertion have a longer run time in RB Trees than in BST? <br />
+
+<details>
+     Depends on the tree. BST insertion depends on height, and RB insertion depends on the log of total entries, so if the log of total entries of a tree is lower than the height, run time of insertion for a RB Tree will be faster.
+<summary>Answer</summary>
+</details>
 
 ## **Sources**
 

@@ -4,9 +4,10 @@
 
         <div class="dropdown">
 
-            <h2>Introduction</h2>
+            <h2 tabindex="0">Introduction</h2>
             <div class="list">
                 <div><a href="/Markdown/introduction" class="link"> Introduction </a></div>
+                <div><a href="/Markdown/prerequisites" class="link"> Prerequisites </a></div>
                 <div><a href="/Markdown/pointers-and-object-contents" class="link"> Pointers & Objects </a></div>
             </div>    
             <h2>Elementary Structures</h2>
@@ -14,7 +15,7 @@
                 <div><a href="/introduction-to-graphs" class="link"> Introduction to Graphs </a></div>
                 <div><a href="/Markdown/LinkedList" class="link"> Linked List </a></div>
                 <div><a href="/Markdown/queues" class="link"> Queues </a></div>
-                <div><a href="/Markdown/rooted-trees" class="link"> Rooted Trees </a></div>
+                <div><a href="/Markdown/rooted-trees" class="link"> Trees </a></div>
                 <div><a href="/Markdown/stacks" class="link"> Stacks </a></div>
             </div>
 
@@ -31,8 +32,10 @@
             <div class="list">
                 <div><a href="/Markdown/Heapsort" class="link"> HeapSort </a></div>
                 <div><a href="/Markdown/quicksort" class="link"> QuickSort </a></div>
+                <div><a href="/Markdown/counting-sort" class="link"> Counting Sort </a></div>
                 <div><a href="/Markdown/lower-bounds-of-sorting" class="link"> Lower Bounds of Sorting  </a></div>
                 <div><a href="/Markdown/graphing-algorithms" class="link"> Graphing Algorithms </a></div>
+                <div><a href="/Markdown/dynamicprogramming" class="link"> Dynamic Programming </a></div>
             </div>
 
         </div>
@@ -49,11 +52,11 @@
         color: black;
         
     }
-    body h1 {
+    .dropdown h1 {
         box-shadow: 0 0.125rem black;   
     }
 
-    body h2 {
+    .dropdown h2 {
         font-family: "Lato", sans-serif;
 		font-weight: 900;
 		font-size: 1.7rem;
@@ -68,10 +71,13 @@
     .link {
         font-family: "Lato", sans-serif;
         font-size: 1.2rem;
-        color: black;
+        color: white;
         padding-inline: 2rem;
         text-decoration: none;	
-        margin: 8px;
+    }
+
+    .link:hover, .link:focus {
+        text-decoration-line: underline;
     }
 
     .list {
@@ -88,14 +94,14 @@
 		position:absolute;
 		top: 75px;
 	
-		height: 360px;
-
         border-style:solid;
         border-width: 2px;
 
         -webkit-backdrop-filter: blur(6px);;
         backdrop-filter: blur(6px);
-		background-color: rgb(185, 223, 254, 0.85);
+		background-color: rgba(0, 119, 184, 0.8);
+        color: white;
+        border-color: black;
         
 		padding-top: 5px;
         padding-bottom: 10px;
