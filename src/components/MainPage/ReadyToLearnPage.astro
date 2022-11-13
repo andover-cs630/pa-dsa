@@ -4,7 +4,8 @@ import Button from "src/components/MainPage/Button.astro";;
 
 <div class="readyToLearnPage">
     <h1> Ready to Learn? </h1>
-    <Button title="Start Here" link="/Markdown/introduction" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/>
+    <div class="button"><Button title="Start Here" link="/Markdown/introduction" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/></div>
+    
 </div>
 
 <style>
@@ -21,8 +22,9 @@ import Button from "src/components/MainPage/Button.astro";;
         align-items: center;
         justify-content: center;
 
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        margin-top: 10rem;
 
         text-align: center;
         width: 100vw;
@@ -40,5 +42,9 @@ import Button from "src/components/MainPage/Button.astro";;
 
     .readyToLearnPage StartHereButton {
         margin: auto;
+    }
+
+    .readyToLearnPage .button {
+        padding-top: 30px;
     }
 </style>
