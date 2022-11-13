@@ -5,7 +5,7 @@ import Stacks from "./Stacks.astro";
 <body>
     <div class="descriptionPage">
         <div class="descriptionText">
-            <h1> Thorough, Well-Researched, </h1> <br/>
+            <h1> Thorough, Well-Researched, </h1>
             <h1> In-Depth Lessons </h1>
             <div class="descriptionText">
                 <h4> a comprehensive guide to data structures and algorithms</h4>
@@ -32,34 +32,42 @@ import Stacks from "./Stacks.astro";
     .descriptionPage {
         font-family: "Lato";
         margin-top: 3rem;
-        margin-left: 3rem;
+        margin-left: 1rem;
         display: grid;
         overflow-y: visible;
 		box-shadow: 0 0.125rem 0 0 black;
+
+        width: 100vw;
+        overflow-x: hidden;
     }
 
     .descriptionText {
         grid-column: 1;
         grid-row: 1;
+        width: 98%;
     }
 
     .descriptionPage h1 {
         color: #5CC6FF;
         /* drop-shadow(30px 10px 4px); */
-        font-size: min(10vw, 5rem);
+        font-size: min(7.3vw, 5rem);
         max-width: 100%;
-        /* white-space: nowrap;
-        overflow: hidden; */
+        white-space: nowrap;
+        overflow: hidden;
 
         margin: 0;
         font-weight: 900;
     }
 
     .descriptionText h4 {
+        display: flex;
         font-family: 'Open Sans', sans-serif;
-        font-size: 2rem;
+        font-size: min(7.3vw, 2.5rem);
         font-weight: 300;
-        width: 40rem;
+
+        margin: 35px;
+        width: 50%;
+        
     }
 
     .examplePost {
@@ -76,6 +84,7 @@ import Stacks from "./Stacks.astro";
         grid-row: 1;
         height: 80vh;
         display: flex;
+        width: 100%;
     }
 
     .starLeft {
@@ -100,9 +109,14 @@ import Stacks from "./Stacks.astro";
         margin-left: auto;
     }
 
-    @media only screen and (max-width: 1300px) {
-        .examplePost {
+    @media only screen and (max-width: 800px) {
+        .examplePost, .starShapes {
             display: none;
+        }
+
+        .descriptionText h4 {
+            margin: 20px;
+            width: 90%;
         }
     }
 </style>

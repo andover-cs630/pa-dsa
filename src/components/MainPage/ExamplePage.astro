@@ -40,28 +40,38 @@
     
     .examplePage {
         width: 100%;
+        height: auto;
         background: #e8e8e8;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     .exampleCode h1 {
         font-family: 'Lato', sans-serif;
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: min(4.5vw, 2rem);
+        font-weight: 400;        
+
+        width: 100%;
+        overflow-x: hidden;
+        white-space: nowrap;
     }
 
     .examplePageHeader {
         font-family: 'Lato', sans-serif;
         color: #000000;
         text-align: center;
-        font-size: 5rem;
-        font-weight: 900;
-        margin: 0;
-        padding: 3rem;
+
+        font-size: min(20vw, 5rem);
+        font-weight: 900;         
+        margin: auto;
+        padding-top: 20px;
+
+        width: 90%;
+        overflow-x: hidden;
     }
 
     .code {
-        display: grid;
+        margi-left: auto;
+        /* grid-template-rows: repeat(3, 50px); */
     }
 
     .redRectangle {
@@ -73,52 +83,56 @@
 
     .examplePageBackground {
         width: 100vw;
-        grid-column: 1;
+        grid-column: 1  ;
         grid-row: 1;
     }
 
     .exampleCode {
         display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        border: 1px solid;
+
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .javaExample, .pythonExample{
+        display: grid;
+
+        width: 90%;
         grid-column: 1;
-        grid-row: 1;
+        margin: 15px;
     }
 
     .javaExample {
-        grid-column: 1;
-        grid-row: 1;
-        width: 50vw;
-        display: grid;
-        justify-content: center;
+        grid-row:1;
     }
 
-    .javaExample img {
-        grid-column: 1;
-        grid-row: 1;
+    .pythonExample {
+        grid-row:2;
     }
 
     .javaExample p1, .pythonExample p1 {
         font-family: "Source Code Pro";
-        font-size: 1.2rem;
+        font-size: min(4.5vw, 1.6rem);
         grid-column: 1;
         grid-row: 1;
         margin-left: 1rem;
-        margin-top: 5rem;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
-    .pythonExample {
-        grid-column: 2;
-        grid-row: 1;
-        width: 50vw;
-        display: grid;
-        justify-content: center;
-    }
-
-    .pythonExample img {
+    .pythonExample img, .javaExample img {
+        max-width: 100%;
         grid-column: 1;
         grid-row: 1;
     }
 
     .javaExample h1, .pythonExample h1 {
+        font-size: min(4.5vw, 1.8rem);
         margin: 0;
         margin-top: -0.1vw;
         grid-column: 1;
@@ -126,9 +140,21 @@
         margin-left: 1rem;
     }
 
-    @media only screen and (max-width: 1300px) {
-        .javaExample, .pythonExample {
-            display: none;
+    @media only screen and (min-width: 800px) {
+        .exampleCode {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        .javaExample {
+            grid-column: 1;
+            grid-row:1;
+        }
+
+        .pythonExample {
+            grid-column: 2;
+            grid-row:1;
         }
     }
+
 </style>
