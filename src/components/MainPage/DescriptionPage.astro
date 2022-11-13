@@ -34,13 +34,13 @@ import Stacks from "./Stacks.astro";
         margin-top: 3rem;
         margin-left: 1rem;
         display: grid;
-        overflow-y: visible;
-		box-shadow: 0 0.125rem 0 0 black;
 
-        width: 100vw;
+        max-width:100%;
         overflow-x: hidden;
-        overflow-y:hidden;
+        overflow-y: visible;
         z-index: 10;
+
+
     }
 
     .descriptionText {
@@ -111,7 +111,7 @@ import Stacks from "./Stacks.astro";
         margin-left: auto;
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1000px) {
         .examplePost, .starShapes {
             display: none;
         }
