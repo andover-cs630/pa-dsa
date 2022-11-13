@@ -93,7 +93,9 @@
     .dropdown {
 		position:absolute;
 		top: 75px;
+        /* right: 0px; */
 
+        width: 250px;
         height: 350px;
 	
         border-style:solid;
@@ -109,5 +111,11 @@
         padding-bottom: 10px;
 		overflow: auto;
 	}
+
+    @media screen and (max-width: 415px) {
+        .dropdown {
+            right: 0px;
+        }
+    }
     
 </style>
