@@ -30,12 +30,14 @@ import Button from "./Button.astro";
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
     .page {
-        width: 100%;
         background: #F2F2F2;
         font-family: "Lato", sans-serif;
         height: 94vh;
         display: grid;
         box-shadow: 0 0.125rem 0 0 black;
+
+        max-width:100%;
+        overflow-x: hidden;
     }
 
     .background {
@@ -125,13 +127,13 @@ import Button from "./Button.astro";
         padding-bottom: 10vh;
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1000px) {
         .binary {
             display: none;
         }
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1000px) {
         .weirdShapes {
             display: none;
         }

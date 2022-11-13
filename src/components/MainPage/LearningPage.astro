@@ -28,9 +28,9 @@ import Button from "./Button.astro";
         </div>
     </div>
 
-    <div class="weirdblob">
+    <!-- <div class="weirdblob">
         <img src="/images/weirdBlob.svg">
-    </div>
+    </div> -->
 
     <div class="practiceExercises">
         <h1> Practice Exercises </h1>
@@ -64,8 +64,10 @@ import Button from "./Button.astro";
         display: grid;
         grid-auto-rows: minmax(min-content, max-content);
         overflow-x: hidden;
-        width: 100vw;
         margin-top: 8rem;
+
+        max-width:100%;
+        overflow-x: hidden;
     }
 
     .flex {
@@ -177,7 +179,7 @@ import Button from "./Button.astro";
         font-size: 1.5rem;
     }
 
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 1000px) {
         .flex {
             flex-direction: row;
         }
