@@ -10,26 +10,35 @@ import Button from "src/components/MainPage/Button.astro";;
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+    body {
+        font-family: "Lato";
+    }
+
     .readyToLearnPage {
-        background: #F2F2F2;
-        height: 50vh;
-        display: grid;
-        grid-template-rows: 300px 0fr;
+        
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        text-align: center;
+        width: 100vw;
+        
+        background: #F2F2F2;
     }
 
     .readyToLearnPage h1 {
-        grid-column: 1;
-        grid-row: 1;
-        font-family: "Lato";
         font-weight: 900;
-        font-size: 4rem;
+
+        font-size: min(15vw, 5rem);
+        margin: 20px auto;
+        
     }
 
     .readyToLearnPage StartHereButton {
-        grid-column: 1;
-        grid-row: 2;
+        margin: auto;
     }
 </style>
