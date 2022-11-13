@@ -46,7 +46,11 @@ import Stacks from "./Stacks.astro";
     .descriptionPage h1 {
         color: #5CC6FF;
         /* drop-shadow(30px 10px 4px); */
-        font-size: 5rem;
+        font-size: min(10vw, 5rem);
+        max-width: 100%;
+        /* white-space: nowrap;
+        overflow: hidden; */
+
         margin: 0;
         font-weight: 900;
     }
