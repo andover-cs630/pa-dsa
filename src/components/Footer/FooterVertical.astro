@@ -1,8 +1,4 @@
----
-import Logo from "./Header/Logo.astro";
----
-
-<div class="footer">
+<div class="footerVertical">
 	<h1> PA DSA </h1>
 	<div class="information">
 		<a href="https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/">
@@ -33,49 +29,48 @@ import Logo from "./Header/Logo.astro";
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 	
-	.footer {
+	.footerVertical {
 		background: #0077B8;
-		margin: 0;
+		width: 100vw;
+		padding: 10px;
+		padding-top:50px;
+
+		text-align: center;
 		padding: 0;
-		display: flex;
 		font-family: "Lato";
 	}
 
-	.footer h1 {
-		margin-bottom: auto;
-		margin-top: auto;
-		padding-left: 2.5rem;
-		margin-right: 3rem;
+	.footerVertical h1 {
+		display: block;
 		color: white;
+		margin: 10px;
+		padding-top: 20px;
+		
 		font-weight: 900;
-		font-size: 3rem;
-		margin-left: 1rem;
+		font-size: 200%;
+		
 	}
 
 	.information {
+
 		color: rgb(255, 255, 255, 0.5);
 		padding: 10px;
 		font-weight: 600;
-		max-width: 40%;
+
 		margin-top: 0.75em;
+		margin-left: auto;
+		margin-right: auto;
+
 	}
 
 	.information h5 {
 		margin: 0;
 	}
 
-	.information ul, p {
-		margin-top: 6px;
-	}
-
 	li, p {
 		font-weight: 300;
 		text-decoration: none;
 		list-style: none;
-	}
-
-	ul {
-		padding-left: 20px;
 	}
 
 	a {

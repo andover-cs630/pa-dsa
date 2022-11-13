@@ -105,6 +105,7 @@ Queues can be implemented in the form of an array with a [pointer](/Markdown/poi
 ## Sources
 
 > **Introduction to Algorithms, 3rd edition:** https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf
+
         String s = "";
         if ((front == rear || rear == -1) && queue[front] == null){
             return "Queue Empty!";
@@ -115,34 +116,37 @@ Queues can be implemented in the form of an array with a [pointer](/Markdown/poi
         }
         return s;
     }
+
 }
 
 public class Main {
 
     public static void main(String[] args) {
-   // Testing Suite
-        Queue q = new Queue(4);
-        System.out.println(q);
-        q.enqueue(10);
-        q.enqueue(4352343.454325);
-        System.out.println(q.size());
-        System.out.println(q);
-        q.enqueue('q');
-        q.enqueue("🥳");
-        System.out.println(q.size());
-        System.out.println(q);
-        q.dequeue();
-        System.out.println(q);
-        System.out.println(q.front());
-        q.dequeue();
-        System.out.println(q.size());
-        System.out.println(q);
-        System.out.println(q.front());
-    }
-}
-```
 
-### S.7.2 - LinkedList Implementation 
+// Testing Suite
+Queue q = new Queue(4);
+System.out.println(q);
+q.enqueue(10);
+q.enqueue(4352343.454325);
+System.out.println(q.size());
+System.out.println(q);
+q.enqueue('q');
+q.enqueue("🥳");
+System.out.println(q.size());
+System.out.println(q);
+q.dequeue();
+System.out.println(q);
+System.out.println(q.front());
+q.dequeue();
+System.out.println(q.size());
+System.out.println(q);
+System.out.println(q.front());
+}
+}
+
+````
+
+### S.7.2 - LinkedList Implementation
 Key Ideas:
 > This implementation uses the same as the above, with arrays, but uses a LinkedList instead.
 
@@ -173,7 +177,7 @@ public class LinkedListQueue {
         }
         return true;
     }
-    
+
     // inserting an item to the end of the current queue
     public void enqueue(int data)
     {
@@ -240,14 +244,19 @@ public class Run {
         queue.printFrontAndRear();
     }
 }
-```
+````
+
 ## S.8 - Python
+
 ### S.8.1 - Array Implementation in Constant Time
+
 Key Ideas:
-> 1) Define the front and the end of the queue as integers
-> 2) Use an array to hold the elements of the queue
-> 3) Use the modulo operator(%) to allow the of the queue to be moved from the end of the array if required. This helps maintain O(1) time complexity for enqueue, dequeue, and other operations
-```Python
+
+> 1. Define the front and the end of the queue as integers
+> 2. Use an array to hold the elements of the queue
+> 3. Use the modulo operator(%) to allow the of the queue to be moved from the end of the array if required. This helps maintain O(1) time complexity for enqueue, dequeue, and other operations
+
+```python
 # implementing queue in constant time with arrays
 class Queue:
 
@@ -258,13 +267,13 @@ class Queue:
     self.q = [None]*maxSize
     self.maxSize = maxSize
 
-  #check to see if queue is full  
+  #check to see if queue is full
   def isFull(self):
     return self.q.size == self.maxSize
 
   def getQ(self):
     return self.q
-    
+
   # check to see if queue is empty
   def isEmpty(self):
     return self.q.size == 0
@@ -318,17 +327,21 @@ print(queue.getQ())
 queue.dequeue()
 queue.dequeue()
 
-# again, check queue 
+# again, check queue
 print(queue.getQ())
 
 # show function of end() and front()
 print(queue.getEnd())
 print(queue.getFront())
 ```
+
 ### S.8.2 - Simpler List Implementation O(n) Time
+
 #### Key Ideas
-> 1) A list is simply a queue with more functionality. So, the idea, though a questionable one, is to restrict the functionality of a list to that of a queue (its really just a list that we add and remove from one end)
-```Python
+
+> 1. A list is simply a queue with more functionality. So, the idea, though a questionable one, is to restrict the functionality of a list to that of a queue (its really just a list that we add and remove from one end)
+
+```python
 # Again, because we are working in python, we have no reason to create a queue using a list because the queue module exists, but here is a simple implementation of a queue
 
 q = []
@@ -353,10 +366,14 @@ print(q)
 
 # again, this implementation of a queue in python with a list is something we advise against. Take advantage of the languages premade modules and do not feel like you have to reinvent the wheel
 ```
-### S.8.3 - Queue.queue module 
+
+### S.8.3 - Queue.queue module
+
 #### Key Ideas
-> 1) Using Python's premade modules to create a queue
-```Python
+
+> 1. Using Python's premade modules to create a queue
+
+```python
 # It is foolish to reinvent the wheel - Queues can be implemented in python using arrays, while still maintaining constant time operations, though the disadvantages of an array still remain. The array has static size and cannot be adjusted after it is initialized. So, take advantage of Python's status as a "high-level" language, and use the libraries available to you, namely, queue and dequeue
 
 from queue import Queue
@@ -390,7 +407,7 @@ print("Item removed from the queue: ", q.get())
 # check that queue is empty, it should be
 print("The queue is empty:", q.empty())
 
-# According to GeeksForGeeks.com, the queue class has these additional functions 
+# According to GeeksForGeeks.com, the queue class has these additional functions
 # maxsize – Number of items allowed in the queue.
 # empty() – Return True if the queue is empty, False otherwise.
 # full() – Return True if there are maxsize items in the queue. If the queue was initialized with maxsize=0 (the default), then full() never returns True.
@@ -402,11 +419,12 @@ print("The queue is empty:", q.empty())
 ```
 
 ## S.9 - Intermediate Questions/Problems Practice Problems Questions (based on difficulty)
-> 1) Write a class with a working queue in Java, using the queue collection method.
-> 2) Create an infinitely sized queue in python using the queue.Queue module.
+
+> 1. Write a class with a working queue in Java, using the queue collection method.
+> 2. Create an infinitely sized queue in python using the queue.Queue module.
 
 ## S.10 - Intermediate Questions/Problems Practice Problems Questions (based on difficulty)
-> 1) Write a Queue class in Java using the Array Implementation method. 
-> 2) Write a Queue class in Java using the LinkedList Implementation method. 
-> 3) Write a Queue class in Python that maintains constant time operations using a list.
 
+> 1. Write a Queue class in Java using the Array Implementation method.
+> 2. Write a Queue class in Java using the LinkedList Implementation method.
+> 3. Write a Queue class in Python that maintains constant time operations using a list.

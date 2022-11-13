@@ -15,7 +15,7 @@ import Button from "./Button.astro";
             </div>
         </div>
         <div class="titles">
-            <h3>A Comprehensive Guide to</h3><br />
+            <h3>A Comprehensive Guide to</h3>
             <h1>Data Structures</h1>
             <h1>& Algorithms</h1>
             <h5>Produced by the Phillips Academy CSC630 Class</h5>
@@ -93,18 +93,21 @@ import Button from "./Button.astro";
         text-decoration: none;
     }
     .titles h1 {
-        font-size: 5rem;
+        font-size: min(13.5vw, 5rem);
         font-weight: 900;
         margin: 0;
+
+        overflow:hidden;
+        white-space:nowrap;
     }
     .titles h3 {
-        font-size: 2rem;
+        font-size: min(8vw, 2rem);
         font-weight: 600;
         color: #0077B8;
         margin: 0;
     }
     .titles h5 {
-        font-size: 1.5rem;
+        font-size: min(6vw, 1.5rem);
         font-weight: 400;
         font-style: italic;
         color: #6F0E0B;
@@ -122,13 +125,13 @@ import Button from "./Button.astro";
         padding-bottom: 10vh;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 800px) {
         .binary {
             display: none;
         }
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 800px) {
         .weirdShapes {
             display: none;
         }

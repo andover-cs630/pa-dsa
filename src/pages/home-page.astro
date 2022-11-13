@@ -5,7 +5,7 @@ import DescriptionPage from 'src/components/MainPage/DescriptionPage.astro';
 import ExamplePage from 'src/components/MainPage/ExamplePage.astro'
 import LearningPage from 'src/components/MainPage/LearningPage.astro';
 import ReadyToLearnPage from 'src/components/MainPage/ReadyToLearnPage.astro';
-import Footer from 'src/components/Footer.astro';
+import Footer from 'src/components/Footer/Footer.astro';
 ---
 <html lang="en">
     <head><title>Home page</title></head>
@@ -17,6 +17,7 @@ import Footer from 'src/components/Footer.astro';
         <LearningPage />
         <ReadyToLearnPage />
         <Footer />
+        
     </body>
 </html>
 
@@ -24,6 +25,7 @@ import Footer from 'src/components/Footer.astro';
     body {
         margin: 0;
         height: auto;
+        width: 100vw;
     }
     body DescriptionPage {
         box-shadow: 0 0.125rem black;
