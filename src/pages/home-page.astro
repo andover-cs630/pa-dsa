@@ -1,22 +1,27 @@
 ---
 import TitlePage from 'src/components/MainPage/TitlePage.astro';
+import LeftSidebar from 'src/components/LeftSidebar.astro';
 import Header from '../components/Header/Header.astro';
-import DescriptionPage from 'src/components/MainPage/DescriptionPage.astro';
-import ExamplePage from 'src/components/MainPage/ExamplePage.astro'
-import LearningPage from 'src/components/MainPage/LearningPage.astro';
-import ReadyToLearnPage from 'src/components/MainPage/ReadyToLearnPage.astro';
-import Footer from 'src/components/Footer/Footer.astro';
+
+const currentPage = Astro.url.pathname;
 ---
+
+
+
 <html lang="en">
-    <head><title>Home page</title></head>
+    <head>
+        <title>Home page</title>
+        <meta name="theme-color" content="rgb(165, 187, 236)">
+    </head>
     <body>
-        <Header/>
-        <TitlePage />
-        <!-- <DescriptionPage /> -->
-        <ExamplePage />
-        <LearningPage />
-        <ReadyToLearnPage />
-        <Footer />
+        <img src="public/images/background.png">
+        <div class="flex">
+            <LeftSidebar currentPage={currentPage} />
+            <div class="right">
+                <Header/>
+                <TitlePage />
+            </div>
+        </div>
         
     </body>
 </html>
@@ -29,5 +34,24 @@ import Footer from 'src/components/Footer/Footer.astro';
     }
     body DescriptionPage {
         box-shadow: 0 0.125rem black;
+    }
+
+    img {
+        position: fixed;
+        width: 100vw;   
+
+        z-index: -10;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+    }
+
+    .right {
+        width: 85vw;
+        display: flex;
+        flex-direction: column;
     }
 </style>

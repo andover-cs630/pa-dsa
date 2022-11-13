@@ -4,17 +4,17 @@ import Button from "./Button.astro";
 
 <body>
     <div class="page">
-        <div class="background" aria-hidden="true">
-            <div class="binary" aria-hidden="true">
-                <img class="leftBinary" src="/images/binary.svg">
-                <img class="rightBinary" src="/images/binary.svg">
-            </div>
-            <div class="weirdShapes" aria-hidden="true">
-                <img class="leftShape" src="/images/weirdShape.svg">
-                <img class="rightShape" src="/images/weirdShape.svg">
-            </div>
+        <div class="title">
+            <em>
+                <h1>Data Structs.</h1>
+                <h1 id="algoirthm">Algorithms</h1>
+            </em>
         </div>
-        <div class="titles">
+        <div class="subtext">
+            <h1>presented by</h1>
+            <img src= "public/images/CSC630.png">
+        </div>
+        <!-- <div class="titles">
             <h3>A Comprehensive Guide to</h3>
             <h1>Data Structures</h1>
             <h1>& Algorithms</h1>
@@ -22,86 +22,93 @@ import Button from "./Button.astro";
             <a href="/introduction" class="button">
                 <Button title="Start Here" link="/Markdown/introduction" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/>
             </a>
-        </div>
+        </div> -->
     </div>
 </body>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    @font-face {
+        font-family: 'Verona';
+        src: url('public/fonts/verona_serial-regular.otf'); 
+    }
+    @font-face {
+        font-family: 'Tommy';
+        src: url('public/fonts/MADE TOMMY Regular_PERSONAL USE.otf'); 
+    }
+
 
     .page {
-        background: #F2F2F2;
-        font-family: "Lato", sans-serif;
-        height: 94vh;
-        display: grid;
-        box-shadow: 0 0.125rem 0 0 black;
-
-        max-width:100%;
-        overflow-x: hidden;
-    }
-
-    .background {
-        grid-column: 1;
-        grid-row: 1;
-        display: grid;
-        overflow: hidden;
-    }
-
-    .binary {
         display: flex;
-        height: 94vh;
-        grid-column: 1;
-        grid-row: 1;
+        flex-direction: column;
+
+        height: 100%;
+
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
     }
 
-    .leftBinary {
-        margin-left: 5vw;
-        margin-right: auto;
-        margin-top: 0;
-        margin-bottom: auto;
-    }
-
-    .rightBinary {
-        margin-left: auto;
-        margin-right: 5vw;
-        margin-top: auto;
-        margin-bottom: 0;
-    }
-
-    .weirdShapes {
+    .title {
         display: flex;
-        height: 48rem;
-        grid-column: 1;
-        grid-row: 1;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+
+        align-items: center;
+
+        width: 100%;
     }
 
-    .leftShape {
-        margin-left: 10vw;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: -10rem;
-        width: 20rem;
-        transform: rotate(180deg);
+    .title h1 {
+        font-family: "Verona";
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: black;
+        color: black;
+
+        font-size: 10rem;
+        margin: 0px;
+        margin-left: -150px;
+        /* margin-top: -100px; */
+        padding:0px;
     }
 
-    .rightShape {
-        margin-left: auto;
-        margin-right: 15vw;
-        margin-top: 2rem;
-        margin-bottom: auto;
+    #algoirthm {
+        margin-top: -50px;
+        padding-left: 280px;
+    }
+
+    .subtext {
+        font-family: "Tommy";
+        text-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+        font-size: 1.2rem;
+        color: white;
+
+        display: flex;
+        flex-direction: row;
+        
+        margin-left: 540px;
+    }
+
+    .subtext img {
+        max-height: 18vh;
+        margin-left: -200px;
+        z-index: -5;
     }
 
     .titles a {
         text-decoration: none;
     }
-    .titles h1 {
+    /* .titles h1 {
         font-size: min(13.5vw, 5rem);
         font-weight: 900;
         margin: 0;
 
         overflow:hidden;
         white-space:nowrap;
-    }
+    } */
     .titles h3 {
         font-size: min(8vw, 2rem);
         font-weight: 600;
@@ -127,15 +134,4 @@ import Button from "./Button.astro";
         padding-bottom: 10vh;
     }
 
-    @media only screen and (max-width: 1000px) {
-        .binary {
-            display: none;
-        }
-    }
-
-    @media only screen and (max-width: 1000px) {
-        .weirdShapes {
-            display: none;
-        }
-    }
 </style>
