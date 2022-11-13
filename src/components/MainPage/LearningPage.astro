@@ -5,23 +5,24 @@ import Button from "./Button.astro";
 <div class="learningStylesPage">
     <h1 class="learningText"> Various Learning Styles </h1>
     <div class="readings">
-        <h1 class="readingsText"> Readings </h1>
-        <div class="box">
-            <div class="rect"></div>
-            <div class="quickSortExample">
-                <div class="quickSort">
-                    <h1 class="quickSortText"> Quick Sort </h1>
-                    <p1> Quicksort works by partitioning an array based on an arbitrary element in the array, which we will refer to as p. The array is divided into two subarrays, one which contains elements larger than p, and one which contains elements smaller than p. The operation is then repeated with each of the subarrays, with a new p for each subarray, until the array is separated into sub-arrays with a designated length, usually 1. p is also known as the pivot. </p1>    
-                </div>
+        <h1> Readings </h1>
+        <div class="rect"></div>
+        <div class="flex">
+            <div class="quickSortText"> 
+                <h1 class="quickSort">Quick Sort</h1>
+                Quicksort works by partitioning an array based on an arbitrary element in the array, which we will refer to as p. The array is divided into two subarrays, one which contains elements larger than p, and one which contains elements smaller than p. The operation is then repeated with each of the subarrays, with a new p for each subarray, until the array is separated into sub-arrays with a designated length, usually 1. p is also known as the pivot.
+            </div>
+            <div class="button">
                 <Button title="Read More" link="/Markdown/quicksort" color="#EB3933" shadow="#BA1812" highlight="#BA1812"/>
             </div>
         </div>
     </div>
-    <div class="videos">
-        <h1 class="videosText"> Videos </h1>
-        <div class="video">
+    <div class="video">
+        <h1> Videos </h1>
+        <div class="rect"></div>
+        <div class="flex">
             <iframe width="1680" height="802" src="https://www.youtube.com/embed/oxblaZtQeyc?rel=0&amp;controls=1&amp;showinfo=0&amp;modestbranding=1" title="Linked Lists CS 630" frameborder="0" allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="videoSide">
+            <div class="button">
                 <Button title="Watch" link="/Markdown/LinkedList" color="#5CC6FF" shadow="#0077B8" highlight="#0077B8"/>
             </div>
         </div>
@@ -32,25 +33,19 @@ import Button from "./Button.astro";
     </div>
 
     <div class="practiceExercises">
-        <h1 class="practiceExerciseText"> Practice Exercises </h1>
+        <h1> Practice Exercises </h1>
         <div class="practiceExercise">
-            <div class="exercise">
-                <p1>
-                    When would QuickSort take O(n<sup>2</sup>) time to sort?
-                </p1>
-                <Button title="Try it" link="/Markdown/quicksort" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/>
+            <div class="flex">
+                <p1> When would QuickSort take O(n<sup>2</sup>) time to sort? </p1>
+                <div class="button"><Button title="Try it" link="/Markdown/quicksort" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/></div>
             </div>
-            <div class="exercise">
-                <p1>
-                    Why do we use decision trees to model binary search?
-                </p1>
-                <Button title="Try it" link="/Markdown/binary-search-trees" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/>
+            <div class="flex">
+                <p1> Why do we use decision trees to model binary search? </p1>
+                <div class="button"><Button title="Try it" link="/Markdown/binary-search-trees" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/></div>
             </div>
-            <div class="exercise">
-                <p1>
-                    Do queues handle multiple data types?
-                </p1>
-                <Button title="Try it" link="/Markdown/queues" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/>
+            <div class="flex">
+                <p1> Do queues handle multiple data types? </p1>
+                <div class="button"><Button title="Try it" link="/Markdown/queues" color="#0077B8" shadow="#005D8F" highlight="#005D8F"/></div>
             </div>
         </div>
     </div>
@@ -61,56 +56,67 @@ import Button from "./Button.astro";
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+    body {
+        font-family: "Lato";
+    }
+
     .learningStylesPage {
         display: grid;
         grid-auto-rows: minmax(min-content, max-content);
         overflow-x: hidden;
+        width: 100vw
     }
 
-    .learningText {
+    .flex {
         display: flex;
+        flex-direction: column;
+
+        border: 2px solid black;
+        padding: 10px;
+        background-color: white;
+
+        max-height: 90%;
+        height: auto;
+        margin: auto;
+        
+
         justify-content: center;
-        font-family: "Lato";
-        font-weight: 900;
-        font-size: 5rem;
-        padding-top: 4rem;
-        grid-column: 1;
-        grid-row: 1;
-    }
+        justify-items: center;
+        align-items: center;
+        align-content: center;
 
-    .readings {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .videos {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .readings, .videos, .practiceExercises {
-        margin-inline: 6.25rem;
-    }
-
-    .readings h1, .videos h1, .practiceExercises h1 {
-        font-family: "Lato";
-        margin: 0rem;
-    }
-
-    .readings p1, .videos p1 {
         font-family: 'Open Sans';
     }
 
-    .readingsText, .videosText, .practiceExerciseText {
+
+    .learningText {
+        justify-content: center;
+        
+        margin: auto;
+        grid-column: 1;
+        grid-row: 1;
+
+        font-weight: 900;
+        font-size: min(20vw, 5rem);
+        max-width: 90%;
+    }
+
+    .readings, .video, .practiceExercises {
+        margin: 10px;
+    }
+
+    .readings > h1, .video > h1, .practiceExercises > h1 {
         font-weight: 900;
         color: #EB3933;
         font-size: 4rem;
+        margin-left: 10px;
         padding-bottom: 1rem;
-        padding-top: 4rem;
+        margin-top:0px;
+        margin-bottom:0px;
     }
 
-    .box {
-        width: auto;
+    .video h1, .practiceExercises h1 {
+        margin-top: 50px;
     }
 
     .rect {
@@ -119,76 +125,66 @@ import Button from "./Button.astro";
         border: 2px solid black;
     }
 
-    .quickSortExample {
-        display: flex;
-        border-inline: 2px solid black;
-        border-bottom: 2px solid black;
-        padding: 2rem;
-        background-color: white;
-        justify-content: space-between;
-        align-items: center;
+    .button {
+        grid-column: 1;
+        grid-row: 2;
+        max-height: 100px;
+        margin: 20px;
     }
 
     .quickSortText {
+        font-size: min(5vw, 1.5rem);
+        font-weight: 300;
+        margin: 40px;
         padding-bottom: 0.2rem;
     }
 
-    .quickSort {
-        width: 60vw;
-    }
-
-    .videos iframe {
-        width: 65vw;
-        height: 65vh;
-    }
-
-    .video {
+    .quickSortText h1  {
         display: flex;
-        align-items: center;
+        padding-bottom: 20px;
+
+        font-weight: 800;
+        margin:0px;
     }
 
-    .videos p1 {
-        font-size: 2rem;
-    }
-
-    .videoSide {
-        inline-size: 20rem;
-        overflow-wrap: break-word;
-        text-align: center;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        margin-left: 5.55vw;
-        gap: 4rem;
-    }
-
-    .videoSide p1 {
-        grid-column: 1;
-        grid-row: 1;
+    iframe {
+        width: 80vw;
+        height: 45vw;
     }
 
     .weirdblob {
-        grid-column: 1;
-        grid-row: 2;
+        position: absolute;
+        top: 200px;
         z-index: -1;
     }
 
-    .practiceExercises {
-        margin-bottom: 3rem;
-    }
-
-    .exercise {
-        background: #f2f2f2;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
+    .practiceExercises .flex {
+        width: 80%;
         justify-content: space-between;
-        margin: 1rem;
+
+        padding: 1.5rem;
+        margin-top:20px;
+
+        border: 2px solid rgb(255, 255, 255, 0);
+        background: #f2f2f2;
+        border-radius: 10px;
+        
     }
 
-    .exercise p1 {
+    .practiceExercises p1 {
         font-family: "Open Sans";
         font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .flex {
+            flex-direction: row;
+        }
+        
+        iframe {
+            max-width: 70vw;
+            height: 50vw;
+        }
     }
 
 </style>
