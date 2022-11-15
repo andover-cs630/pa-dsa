@@ -1,5 +1,5 @@
 ---
-title: Lower Bounds of Sorting
+title: Lower Bounds of Searching and Sorting
 description: An important detail when engaging with a variety of Search Algorithms
 layout: "@main"
 ---
@@ -62,7 +62,7 @@ $log2(n!) = log2(n) + log2(n-1) + … + log2 = O(nlogn)$
 
 ## **S.3 Experiments with Merge Sort**
 
-Code implementation: In the following java and python code, we will be implementing merge sort and testing its average array accesses across different sizes of arrays to see its run time.
+Code implementation: In the following java and python code, we will be implement merge sort, an efficient sorting algorithm whose variations are used by Java and Python under the hood, and testing its average array accesses across different sizes of arrays to see its run time.
 
 **Java:**
 
