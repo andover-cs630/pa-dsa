@@ -24,30 +24,30 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	'Intro': [
-		{ text: 'Introduction', link: 'Markdown/introduction' },
-		{ text: 'Prerequisites', link: 'Markdown/prerequisites' },
-		{ text: 'Pointers & Objects', link: 'Markdown/pointers-and-object-contents' },
+		{ text: 'Introduction', link: 'articles/introduction' },
+		{ text: 'Prerequisites', link: 'articles/prerequisites' },
+		{ text: 'Pointers & Objects', link: 'articles/pointers-and-objects' },
 	],
 	'Elementary Structures': [
-		{ text: 'Introduction to Graphs', link: 'introduction-to-graphs/' },
-		{ text: 'Linked List', link: 'Markdown/LinkedList' },
-		{ text: 'Queues', link: 'Markdown/queues' },
-		{ text: 'Trees', link: 'Markdown/rooted-trees' },
-		{ text: 'Stacks', link: 'Markdown/stacks' },
+		{ text: 'Introduction to Graphs', link: 'articles/introduction-to-graphs/' },
+		{ text: 'Linked List', link: 'articles/linked-lists' },
+		{ text: 'Queues', link: 'articles/queues' },
+		{ text: 'Trees', link: 'articles/rooted-trees' },
+		{ text: 'Stacks', link: 'articles/stacks' },
 	],
 
 	'Advanced Structures': [
-		{ text: 'Binary Search Tree', link: 'Markdown/binary-search-trees' },
-		{ text: 'Hash Tables', link: 'Markdown/hash-tables' },
-		{ text: 'Red Black Trees', link: 'Markdown/RedBlackTrees' },
+		{ text: 'Binary Search Tree', link: 'articles/binary-search-trees' },
+		{ text: 'Hash Tables', link: 'articles/hash-tables' },
+		{ text: 'Red Black Trees', link: 'articles/red-black-trees' },
 	],
 
 	'Algorithms': [
-		{ text: 'Heapsort', link: 'Markdown/Heapsort' },
-		{ text: 'Quicksort', link: 'Markdown/quicksort' },
-		{ text: 'Counting Sort', link: 'Markdown/counting-sort' },
-		{ text: 'Lower Bounds of Sorting', link: 'Markdown/lower-bounds-of-sorting' },
-		{ text: 'Graphing Algorithms', link: 'Markdown/graphing-algorithms' },
-		{ text: 'Dynamic Programming', link: 'Markdown/dynamicprogramming' },
+		{ text: 'Heapsort', link: 'articles/heapsort' },
+		{ text: 'Quicksort', link: 'articles/quicksort' },
+		{ text: 'Counting Sort', link: 'articles/counting-sort' },
+		{ text: 'Lower Bounds of Sorting', link: 'articles/lower-bounds-of-sorting' },
+		{ text: 'Graphing Algorithms', link: 'articles/graphing-algorithms' },
+		{ text: 'Dynamic Programming', link: 'articles/dynamic-programming' },
 	],
 };
