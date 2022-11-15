@@ -24,7 +24,6 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	'Intro': [
-		{ text: 'Introduction', link: 'articles/introduction' },
 		{ text: 'Prerequisites', link: 'articles/prerequisites' },
 		{ text: 'Pointers & Objects', link: 'articles/pointers-and-objects' },
 	],
